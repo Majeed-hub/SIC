@@ -2,9 +2,9 @@
 :root {
   --border: hsla(0, 0%, 50%, 0.4);
   --backdrop-color: #1e1e2fcc;
-  --sl-color-accent: #7D3C98; /* Vibrant Purple */
-  --sl-color-accent-high: #B084CC; /* Light Purple */
-  --sl-color-accent-low: #4A235A; /* Dark Purple */
+  --sl-color-accent: #800000; /* Maroon (Qatar Flag) */
+  --sl-color-accent-high: #9e2a2f; /* Dark Maroon */
+  --sl-color-accent-low: #5c1414; /* Darker Maroon */
   --sl-color-black: #181818;
   --sl-color-gray-1: #f0f0f0;
   --sl-color-gray-2: #c2c2c2;
@@ -13,16 +13,16 @@
   --sl-color-gray-5: #3e3e3e;
   --sl-color-gray-6: #272727;
   --sl-color-white: #fff;
-  --list-marker-color: #A569BD; /* Purple Tint */
+  --list-marker-color: #800000; /* Maroon */
 }
 
 /* Light mode colors */
 :root[data-theme="light"] {
   --border: hsla(0, 0%, 60%, 0.4);
   --backdrop-color: #f6f6f6cc;
-  --sl-color-accent: #4A235A; /* Deep Purple */
-  --sl-color-accent-high: #7D3C98; /* Medium Purple */
-  --sl-color-accent-low: #B084CC; /* Soft Purple */
+  --sl-color-accent: #800000; /* Maroon */
+  --sl-color-accent-high: #9e2a2f; /* Dark Maroon */
+  --sl-color-accent-low: #B084CC; /* Soft Maroon */
   --sl-color-black: #fff;
   --sl-color-gray-1: #272727;
   --sl-color-gray-2: #3e3e3e;
@@ -32,7 +32,7 @@
   --sl-color-gray-6: #f0f0f0;
   --sl-color-gray-7: #f6f6f6;
   --sl-color-white: #181818;
-  --list-marker-color: #7D3C98; /* Vibrant Purple */
+  --list-marker-color: #800000; /* Maroon */
 }
 
 /* Header styles */
@@ -108,14 +108,14 @@ article.card {
 
 /* Callouts */
 .starlight-aside--tip {
-  background: linear-gradient(45deg, #7D3C98, #B084CC);
+  background: linear-gradient(45deg, #800000, #9e2a2f);
   border: none;
   border-radius: 0.5rem;
   color: #f6e5ff;
 }
 
 .starlight-aside--note {
-  background: linear-gradient(45deg, #4A235A, #7D3C98);
+  background: linear-gradient(45deg, #5c1414, #800000);
   border: none;
   border-radius: 0.5rem;
   color: #e0d1ff;
