@@ -9,21 +9,20 @@ const navBarLinks = [
 // An array of links for footer
 const footerLinks = [
   {
-    section: "Quick links",
+    section: "Ecosystem",
     links: [
-      { name: "About us", url: "Aboutus" },
-      { name: "Products", url: "/products" },
-      { name: "Services", url: "/services" },
-      { name: "Contact us", url: "/Contact us" },
-
+      { name: "Documentation", url: "/welcome-to-docs/" },
+      { name: "Tools & Equipment", url: "/products" },
+      { name: "Construction Services", url: "/services" },
     ],
   },
   {
-    section: "",
+    section: "Company",
     links: [
-      { name: "Testimonials", url: "#" },
-      { name: "Blogs", url: "/blog" },
-      { name: "Our Clients", url: "#" },
+      { name: "About us", url: "#" },
+      { name: "Blog", url: "/blog" },
+      { name: "Careers", url: "#" },
+      { name: "Contact us", url: "#" },
     ],
   },
 ];
@@ -31,7 +30,9 @@ const footerLinks = [
 const socialLinks = {
   facebook: "https://www.facebook.com/qipf18/",
   x: "https://twitter.com/",
+  github: "https://github.com/mearashadowfax/ScrewFast",
   google: "https://www.google.com/",
+  slack: "https://slack.com/",
 };
 
 export default {
