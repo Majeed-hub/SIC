@@ -4,7 +4,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
 import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
 import ClientsSection from "@components/sections/landing/ClientsSection.astro";
-// import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
+import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
 // import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 // import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
 // import PricingSection from "@components/sections/pricing/PricingSection.astro";
@@ -12,9 +12,9 @@ import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 // import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/Untitled design.png";
 // import faqs from "@data/faqs.json";
-// import features from "@data/features.json";
+import features from "@data/features.json";
 // import pricing from "@data/pricing.json";
-// import featureImage from "@images/features-image.avif";
+import featureImage from "@images/features-image.avif";
 // import construction from "@images/construction-image.avif";
 // import tools from "@images/automated-tools.avif";
 // import dashboard from "@images/dashboard-image.avif";
@@ -55,8 +55,10 @@ const avatarSrcs: Array<string> = [
   src={featureImage} 
   alt="High-quality PET Preform products"
   features={features} 
-  />
+/>
 
+
+<!-- 
   <FeaturesNavs
     title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
     tabs={[
@@ -87,7 +89,7 @@ const avatarSrcs: Array<string> = [
         alt: "Gray metal building frame near tower crane during daytime",
       },
     ]}
-  />
+  /> -->
 
   <!-- <TestimonialsSection
     title="Fast-Track Your Production"
