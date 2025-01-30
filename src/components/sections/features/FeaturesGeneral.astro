@@ -75,7 +75,6 @@ const { title, subTitle, src, alt, features } = Astro.props;
     </div>
   </div>
 </section> -->
-
 <section
   class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full break-words"
 >
@@ -99,13 +98,15 @@ const { title, subTitle, src, alt, features } = Astro.props;
     <div class="lg:col-span-1">
       <!-- Rendering title -->
       <h2
-        class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl"
+        class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl break-words"
       >
         {title}
       </h2>
       <!-- Rendering subtitle -->
       {subTitle && (
-        <p class="mt-2 text-pretty text-neutral-600 dark:text-neutral-400 md:mt-4">
+        <p
+          class="mt-2 text-pretty text-neutral-600 dark:text-neutral-400 md:mt-4 break-words"
+        >
           {subTitle}
         </p>
       )}
@@ -114,10 +115,13 @@ const { title, subTitle, src, alt, features } = Astro.props;
     <!-- Block to display the IconBlock components -->
     <div class="lg:col-span-2">
       <div class="grid gap-8 sm:grid-cols-2 md:gap-12">
-        <!-- Injecting IconBlock components with different properties -->
         {features &&
           features.map((feature) => (
-            <IconBlock heading={feature.heading} content={feature.content}>
+            <IconBlock
+              heading={feature.heading}
+              content={feature.content}
+              class="break-words"
+            >
               <Icon name={feature.svg} />
             </IconBlock>
           ))}
