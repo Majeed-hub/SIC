@@ -42,7 +42,7 @@ export const OG = {
 
 export const partnersData = [
     {
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" viewBox="0 0 810 810" height="200" version="1.0">
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" viewBox="0 0 810 810" height="100" version="1.0">
   <defs>
     <filter x="0%" y="0%" width="100%" height="100%" id="a">
       <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" color-interpolation-filters="sRGB"/>
@@ -69,7 +69,7 @@ export const partnersData = [
         href: "#",
     },
     {
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" viewBox="0 0 810 810" height="200" version="1.0">
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" viewBox="0 0 810 810" height="100" version="1.0">
   <defs>
     <filter x="0%" y="0%" width="100%" height="100%" id="a">
       <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" color-interpolation-filters="sRGB"/>
@@ -96,7 +96,7 @@ export const partnersData = [
         href: "#",
     },
     {
-        icon: ` <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" viewBox="0 0 810 810" height="200" version="1.0">
+        icon: ` <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" viewBox="0 0 810 810" height="100" version="1.0">
   <defs>
     <filter x="0%" y="0%" width="100%" height="100%" id="a">
       <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" color-interpolation-filters="sRGB"/>
@@ -124,7 +124,7 @@ export const partnersData = [
     },
 
     {
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" viewBox="0 0 810 810" height="200" version="1.0">
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" viewBox="0 0 810 810" height="100" version="1.0">
   <defs>
     <filter x="0%" y="0%" width="100%" height="100%" id="a">
       <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" color-interpolation-filters="sRGB"/>

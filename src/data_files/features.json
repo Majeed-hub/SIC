@@ -1,22 +1,22 @@
 [
   {
     "heading": "State-of-the-Art Manufacturing",
-    "content": "Our factory is equipped with the latest Milacron injection molding machines, ensuring high-quality PET preforms with smooth finishes, uniform wall thickness, and superior clarity.",
-    "svg": "factory"
+    "content": "Equipped with Milacron injection molding machines for high-quality PET preforms with smooth finishes.",
+    "svg": "groups"
   },
   {
     "heading": "High Production Capacity",
-    "content": "With a production capacity of 80 million preforms per month, we cater to both local and international markets, ensuring consistent supply and efficient manufacturing.",
-    "svg": "speed"
+    "content": "With a production capacity of 80 million preforms per month, we cater to both local and international market.",
+    "svg": "books"
   },
   {
     "heading": "Stringent Quality Control",
-    "content": "We adhere to ISO 9001, ISO 14001, ISO 45001, and ISO 22000 certifications, implementing strict quality assurance measures to produce preforms that meet global standards.",
-    "svg": "shield"
+    "content": "We adhere to ISO 9001, 14001,  45001, and ISO 22000 certifications, implementing strict quality measures.",
+    "svg": "verified"
   },
   {
     "heading": "Innovative and Sustainable Solutions",
-    "content": "We continuously invest in R&D to develop innovative, lightweight preforms that maintain strength while reducing material use, supporting sustainability in plastic packaging.",
-    "svg": "leaf"
+    "content": "We continuously invest in R&D to develop innovative, lightweight preforms that maintain strength.",
+    "svg": "frame"
   }
 ]

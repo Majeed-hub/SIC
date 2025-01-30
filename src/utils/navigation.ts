@@ -2,28 +2,31 @@
 const navBarLinks = [
   { name: "Home", url: "/" },
   { name: "Products", url: "/products" },
-  { name: "Services", url: "/services" },
   { name: "Blog", url: "/blog" },
+  { name: "About", url: "/services" },
   { name: "Contact", url: "/contact" },
 
 ];
 // An array of links for footer
 const footerLinks = [
   {
-    section: "Ecosystem",
+    section: "Quick links",
     links: [
-      { name: "Documentation", url: "/welcome-to-docs/" },
-      { name: "Tools & Equipment", url: "/products" },
-      { name: "Construction Services", url: "/services" },
+      { name: "Products", url: "/products" },
+      { name: "About Us", url: "/services" },
+      { name: "Contact us", url: "#" },
+      { name: "Blog", url: "/blog" },
+
     ],
   },
   {
-    section: "Company",
+    section: "",
     links: [
-      { name: "About us", url: "#" },
-      { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "#" },
-      { name: "Contact us", url: "#" },
+      { name: "Testimonials", url: "#" },
+      { name: "Our Clients", url: "#" },
+      { name: "Faq", url: "#" },
+
+     
     ],
   },
 ];

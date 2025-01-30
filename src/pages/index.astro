@@ -5,19 +5,18 @@ import HeroSection from "@components/sections/landing/HeroSection.astro";
 import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
 import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
-// import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
-// import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
+import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
 // import PricingSection from "@components/sections/pricing/PricingSection.astro";
-// import FAQ from "@components/sections/misc/FAQ.astro";
+import FAQ from "@components/sections/misc/FAQ.astro";
 // import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/Untitled design.png";
-// import faqs from "@data/faqs.json";
+import faqs from "@data/faqs.json";
 import features from "@data/features.json";
 // import pricing from "@data/pricing.json";
-import featureImage from "@images/features-image.avif";
-// import construction from "@images/construction-image.avif";
-// import tools from "@images/automated-tools.avif";
-// import dashboard from "@images/dashboard-image.avif";
+import construction from "@images/construction-image.avif";
+import tools from "@images/automated-tools.avif";
+import dashboard from "@images/dashboard-image.avif";
 import { partnersData } from "@/data_files/constants";
 
 const avatarSrcs: Array<string> = [
@@ -38,7 +37,6 @@ const avatarSrcs: Array<string> = [
     primaryBtnURL="/products"
     secondaryBtn="Contact us"
     secondaryBtnURL="/contact"
-
     src={heroImage}
     alt="Stack of Water Preform product"
   />
@@ -51,47 +49,44 @@ const avatarSrcs: Array<string> = [
 
   <FeaturesGeneral
   title="Excellence in PET Preform Manufacturing"
-  subTitle="At Qatar International Plastic Factory, we specialize in high-quality PET preforms for water, juice, and dairy packaging. Our advanced technology ensures precision, durability, and sustainability."
-  src={featureImage} 
-  alt="High-quality PET Preform products"
+  subTitle="At Qatar International Plastic Factory, we specialize in high-quality PET preforms for water, juice, and dairy packaging."
   features={features} 
 />
 
 
-<!-- 
-  <FeaturesNavs
-    title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
-    tabs={[
-      {
-        heading: "Cutting-Edge Tools",
-        content:
-          "Empower your projects with ScrewFast's cutting-edge tools. Experience enhanced efficiency in construction management with our sophisticated automated solutions.",
-        svg: "tools",
-        src: tools,
-        alt: "Yellow and black heavy equipment on brown grass field",
-        first: true,
-      },
-      {
-        heading: "Intuitive Dashboards",
-        content:
-          "Navigate with ease using ScrewFast's intuitive dashboards. Set up and oversee your projects seamlessly, with user-friendly interfaces designed for quick and effective workflow management.",
-        svg: "dashboard",
-        src: dashboard,
-        alt: "A screenshot or graphic representation of the intuitive dashboard",
-        second: true,
-      },
-      {
-        heading: "Robust Features",
-        content:
-          "Minimize complexity, maximize productivity. ScrewFast's robust features are engineered to streamline your construction process, delivering results that stand out for their excellence.",
-        svg: "house",
-        src: construction,
-        alt: "Gray metal building frame near tower crane during daytime",
-      },
-    ]}
-  /> -->
+<FeaturesNavs
+  title={`Customize <span class="text-yellow-500 dark:text-yellow-400">Qatar International Plastic Factory</span>'s offerings to suit your packaging needs.`}
+  tabs={[
+    {
+      heading: "State-of-the-Art PET Preforms",
+      content:
+        "We specialize in high-quality PET preforms for water, juice, and dairy products, manufactured using advanced Milacron machines.",
+      svg: "tools",
+      src: tools,
+      alt: "PET preforms on a production line",
+      first: true,
+    },
+    {
+      heading: "Custom Solutions for Hot & Cold Fill",
+      content:
+        "Our PET preforms are tailored for both hot fill (up to 80°C) and cold fill applications, designed to meet the highest industry standards.",
+      svg: "dashboard",
+      src: dashboard,
+      alt: "Custom PET preforms for hot and cold fill applications",
+      second: true,
+    },
+    {
+      heading: "Quality Assurance & Innovation",
+      content:
+        "Equipped with advanced instruments, we ensure top-quality standards while continuously innovating new mold products.",
+      svg: "house",
+      src: construction,
+      alt: "Quality assurance instruments in the factory",
+    },
+  ]}
+/>
 
-  <!-- <TestimonialsSection
+  <TestimonialsSection
     title="Fast-Track Your Production"
     subTitle="At Qatar International Plastic Factory, we ensure a swift start with instant production setup. Experience the speed of manufacturing redefined."
     ;
@@ -126,11 +121,11 @@ const avatarSrcs: Array<string> = [
         description: "quicker production using innovative plastic solutions",
       },
     ]}
-  /> -->
+  />
 
   <!-- <PricingSection pricing={pricing} /> -->
 
-  <!-- <FAQ title="Frequently<br />asked questions" faqs={faqs} /> -->
+  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
 
  <HeroSectionAlt
   title="Let’s Innovate Together"

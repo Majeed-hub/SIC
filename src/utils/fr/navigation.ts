@@ -1,31 +1,32 @@
 
 const navBarLinks = [
-  { name: "Accueil", url: "/fr" },
-  { name: "Produits", url: "/fr/products" },
-  { name: "Services", url: "/fr/services" },
-  { name: "Blog", url: "/fr/blog" },
-  { name: "Contact", url: "/fr/contact" },
+  { name: "الرئيسية", url: "/" },
+  { name: "المنتجات", url: "/products" },
+  { name: "المدونة", url: "/blog" },
+  { name: "من نحن", url: "/services" },
+  { name: "اتصل بنا", url: "/contact" },
 ];
 
 const footerLinks = [
   {
-    section: "Écosystème",
+    section: "روابط سريعة",
     links: [
-      { name: "Documentation", url: "/fr/welcome-to-docs/" },
-      { name: "Outils et Équipements", url: "/fr/products" },
-      { name: "Services de Construction", url: "/fr/services" },
+      { name: "المنتجات", url: "/products" },
+      { name: "من نحن", url: "/services" },
+      { name: "اتصل بنا", url: "#" },
+      { name: "المدونة", url: "/blog" },
     ],
   },
   {
-    section: "Société",
+    section: "",
     links: [
-      { name: "À propos de nous", url: "#" },
-      { name: "Blog", url: "/fr/blog" },
-      { name: "Carrières", url: "#" },
-      { name: "Clients", url: "#" },
+      { name: "آراء العملاء", url: "#" },
+      { name: "عملاؤنا", url: "#" },
+      { name: "الأسئلة الشائعة", url: "#" },
     ],
   },
 ];
+
 
 const socialLinks = {
   facebook: "#",
