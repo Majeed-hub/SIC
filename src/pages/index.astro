@@ -5,7 +5,7 @@ import HeroSection from "@components/sections/landing/HeroSection.astro";
 import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
 import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
-// import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 // import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
 // import PricingSection from "@components/sections/pricing/PricingSection.astro";
 // import FAQ from "@components/sections/misc/FAQ.astro";
@@ -15,9 +15,9 @@ import heroImage from "@images/Untitled design.png";
 import features from "@data/features.json";
 // import pricing from "@data/pricing.json";
 import featureImage from "@images/features-image.avif";
-// import construction from "@images/construction-image.avif";
-// import tools from "@images/automated-tools.avif";
-// import dashboard from "@images/dashboard-image.avif";
+import construction from "@images/construction-image.avif";
+import tools from "@images/automated-tools.avif";
+import dashboard from "@images/dashboard-image.avif";
 import { partnersData } from "@/data_files/constants";
 
 const avatarSrcs: Array<string> = [
@@ -50,14 +50,14 @@ const avatarSrcs: Array<string> = [
   />
 
   <FeaturesGeneral
-    title="Meeting Industry Demands"
-    subTitle="At ScrewFast, we tackle the unique challenges  in the hardware and construction sectors. From cutting-edge tools to expert services, we're dedicated to helping you overcome obstacles and achieve your goals."
-    src={featureImage}
-    alt="ScrewFast products in floating boxes"
-    features={features}
+  title="Excellence in PET Preform Manufacturing"
+  subTitle="At Qatar International Plastic Factory, we specialize in high-quality PET preforms for water, juice, and dairy packaging. Our advanced technology ensures precision, durability, and sustainability."
+  src={featureImage} 
+  alt="High-quality PET Preform products"
+  features={features} 
   />
 
-  <!-- <FeaturesNavs
+  <FeaturesNavs
     title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
     tabs={[
       {
@@ -87,7 +87,7 @@ const avatarSrcs: Array<string> = [
         alt: "Gray metal building frame near tower crane during daytime",
       },
     ]}
-  /> -->
+  />
 
   <!-- <TestimonialsSection
     title="Fast-Track Your Production"
