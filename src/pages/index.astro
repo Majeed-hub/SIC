@@ -10,7 +10,7 @@ import TestimonialsSection from "@components/sections/testimonials/TestimonialsS
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
 import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
-import heroImage from "@images/hero-image.avif";
+import heroImage from "@images/hero-image.png";
 import faqs from "@data/faqs.json";
 import features from "@data/features.json";
 import pricing from "@data/pricing.json";
@@ -29,27 +29,18 @@ const avatarSrcs: Array<string> = [
 ---
 
 <MainLayout>
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Explore ScrewFast on GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
 
   <HeroSection
-    title=`Equip Your Projects with <span
-        class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Top-quality hardware tools and expert construction services for every project need."
+    title=`Qatar's Leading PET Preform <span
+        class="text-yellow-400 dark:text-yellow-400">Manufacturer</span>`
+    subTitle="Innovative Excellence in Plastic Solutions for Water, Juice & Dairy Packaging."
     primaryBtn="Start Exploring"
     primaryBtnURL="/products"
-    secondaryBtn="Contact Sales Team"
+    secondaryBtn="Contact us"
     secondaryBtnURL="/contact"
-    withReview={true}
-    avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
-    starCount={4}
-    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+
     src={heroImage}
-    alt="Stack of ScrewFast product boxes containing assorted hardware tools"
+    alt="Stack of Water Preform product"
   />
 
   <ClientsSection
@@ -139,9 +130,9 @@ const avatarSrcs: Array<string> = [
 
   <FAQ title="Frequently<br />asked questions" faqs={faqs} />
 
-  <HeroSectionAlt
-    title="Let's Build Together"
-    subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
-    url="https://github.com/mearashadowfax/ScrewFast"
+ <HeroSectionAlt
+  title="Let’s Innovate Together"
+  subTitle="Qatar International Plastic Factory is your trusted partner in delivering high-quality PET preforms for water, juice, and dairy packaging. Explore our innovative solutions and state-of-the-art manufacturing capabilities."
+  url="https://www.sic-q.com"
   />
 </MainLayout>

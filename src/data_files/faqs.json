@@ -1,29 +1,37 @@
 {
-  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "subTitle": "Have questions about our PET preforms or manufacturing services? Find answers to common queries below.",
   "faqs": [
     {
-      "question": "What types of tools are included in the Starter Kit?",
-      "answer": "The Starter Kit features essential hand and power tools for diverse DIY projects, including hammers, drills, screwdrivers, and a variety of fasteners. It's a curated selection to help beginners and experienced DIYers alike tackle most home improvement tasks."
+      "question": "What types of PET preforms do you manufacture?",
+      "answer": "We specialize in producing high-quality PET preforms for water, juice, and dairy packaging. Our preforms come in various sizes and neck finishes to meet diverse customer requirements."
     },
     {
-      "question": "Can I upgrade from the Starter Kit to the Professional Toolbox?",
-      "answer": "Absolutely! You can upgrade to the Professional Toolbox at any time to access a wider range of high-quality tools, enjoy priority customer support, and receive exclusive content. Contact our support team for a seamless transition."
+      "question": "What is your production capacity?",
+      "answer": "Our factory has a monthly production capacity of 80 million PET preforms, supported by 6 state-of-the-art production lines with 72-cavity Milacron machines."
     },
     {
-      "question": "What discounts are available for bulk orders through the Professional Toolbox plan?",
-      "answer": "Professional Toolbox members are entitled to exclusive discounts on bulk orders, the percentage of which may vary depending on the order volume. Get in touch with us to discuss your needs, and we'll provide a tailored discount structure."
+      "question": "Do you offer custom preform designs?",
+      "answer": "Yes, we design and manufacture custom PET preforms tailored to specific customer needs. Our team ensures optimal material distribution and uniform wall thickness for superior performance."
     },
     {
-      "question": "What kind of customer support can I expect?",
-      "answer": "All our customers receive dedicated email support. With the Starter Kit, you'll receive our standard support, while the Professional Toolbox plan upgrades you to priority support, meaning faster response times and specialized assistance."
+      "question": "What quality certifications does your factory hold?",
+      "answer": "We are certified with ISO 9001:2015 (Quality Management), ISO 14001:2015 (Environmental Management), ISO 45001:2018 (Occupational Health & Safety), and ISO 22000:2018 (Food Safety Management)."
     },
     {
-      "question": "How current are the online resources and tutorials?",
-      "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
+      "question": "Can you handle both hot-fill and cold-fill applications?",
+      "answer": "Yes, our PET preforms are designed for both hot-fill (up to 80°C) and cold-fill applications, ensuring aseptic processing and long shelf life for beverages."
     },
     {
-      "question": "Does ScrewFast offer services for large-scale construction projects?",
-      "answer": "Yes, our Enterprise Solutions are designed for larger companies requiring comprehensive services. We provide consultation, planning, and supply of high-grade tools and materials, as well as staffing solutions for substantial construction needs. Contact us for a customized quote."
+      "question": "Where is your factory located?",
+      "answer": "Our factory is located in the New Industrial Area, Doha, Qatar, with a built-up area of 16,000 square meters. The facility is equipped with advanced machinery and skilled professionals."
+    },
+    {
+      "question": "How do I contact your sales team?",
+      "answer": "You can reach our sales team by phone at +974 4441 1305, by email at info@sic-q.com, or by visiting our website at www.sic-q.com."
+    },
+    {
+      "question": "Do you provide samples for testing?",
+      "answer": "Yes, we provide samples of our PET preforms for testing and evaluation. Contact us to request samples tailored to your specific requirements."
     }
   ]
 }

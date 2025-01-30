@@ -1,38 +1,38 @@
-
+// مصفوفة الروابط لشريط التنقل
 const navBarLinks = [
-  { name: "Accueil", url: "/fr" },
-  { name: "Produits", url: "/fr/products" },
-  { name: "Services", url: "/fr/services" },
-  { name: "Blog", url: "/fr/blog" },
-  { name: "Contact", url: "/fr/contact" },
+  { name: "الصفحة الرئيسية", url: "/" },
+  { name: "المنتجات", url: "/products" },
+  { name: "الخدمات", url: "/services" },
+  { name: "المدونة", url: "/blog" },
+  { name: "اتصل بنا", url: "/contact" },
 ];
 
+// مصفوفة الروابط للتذييل
 const footerLinks = [
   {
-    section: "Écosystème",
+    section: "روابط سريعة",
     links: [
-      { name: "Documentation", url: "/fr/welcome-to-docs/" },
-      { name: "Outils et Équipements", url: "/fr/products" },
-      { name: "Services de Construction", url: "/fr/services" },
+      { name: "معلومات عنا", url: "" },
+      { name: "المنتجات", url: "/products" },
+      { name: "الخدمات", url: "/services" },
+      { name: "اتصل بنا", url: "#" },
     ],
   },
   {
-    section: "Société",
+    section: "",
     links: [
-      { name: "À propos de nous", url: "#" },
-      { name: "Blog", url: "/fr/blog" },
-      { name: "Carrières", url: "#" },
-      { name: "Clients", url: "#" },
+      { name: "الشهادات", url: "#" },
+      { name: "المدونات", url: "/blog" },
+      { name: "عملاؤنا", url: "#" },
     ],
   },
 ];
 
+// كائن الروابط لرموز التواصل الاجتماعي
 const socialLinks = {
-  facebook: "#",
-  x: "#",
-  github: "https://github.com/mearashadowfax/ScrewFast",
-  google: "#",
-  slack: "#",
+  facebook: "https://www.facebook.com/qipf18/",
+  x: "https://twitter.com/",
+  google: "https://www.google.com/",
 };
 
 export default {
