@@ -91,3 +91,8 @@ select {
     transform: translateX(0.25rem);
     transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* Global CSS solution */
+.text-neutral-600, .text-neutral-400 {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
