@@ -1,50 +1,54 @@
-/* Dark mode colors. */
+/* Dark mode colors */
 :root {
-    --primary-button-hover: #ff801f;
-    --backdrop-color: #272727cc;
-    --sl-color-accent: #ff801f;
-    --sl-color-accent-high: #ffa057;
-    --sl-color-accent-low: #562800;
+    --primary-button-hover: #7D3C98; /* Medium Purple */
+    --backdrop-color: #1e1e2fcc;
+    --sl-color-accent: #7D3C98; /* Vibrant Purple */
+    --sl-color-accent-high: #B084CC; /* Light Purple */
+    --sl-color-accent-low: #4A235A; /* Dark Purple */
     --sl-color-black: #181818;
-    --sl-color-gray-1: #eee;
+    --sl-color-gray-1: #f0f0f0;
     --sl-color-gray-2: #c2c2c2;
-    --sl-color-gray-3: #8b8b8b;
-    --sl-color-gray-4: #585858;
-    --sl-color-gray-5: #383838;
+    --sl-color-gray-3: #9b9b9b;
+    --sl-color-gray-4: #666;
+    --sl-color-gray-5: #3e3e3e;
     --sl-color-gray-6: #272727;
     --sl-color-white: #fff;
-    --yellow-hsl: 43.3, 96.4%, 56.3%;
-    --overlay-yellow: hsla(var(--yellow-hsl), .2);
+    --purple-hsl: 268, 58%, 45%; /* Purple Tint */
+    --overlay-purple: hsla(var(--purple-hsl), .2);
     --border: hsla(var(--border-neutral), .4);
     --border-neutral: 0, 0%, 25.1%;
 }
 
-/* Light mode colors. */
+/* Light mode colors */
 :root[data-theme='light'] {
-    --primary-button-hover: #ff801f;
+    --primary-button-hover: #4A235A; /* Dark Purple */
     --backdrop-color: #f6f6f699;
-    --sl-color-accent: #f76b15;
-    --sl-color-accent-high: #562800;
-    --sl-color-accent-low: #ffa057;
+    --sl-color-accent: #B084CC; /* Soft Purple */
+    --sl-color-accent-high: #7D3C98; /* Medium Purple */
+    --sl-color-accent-low: #4A235A; /* Dark Purple */
     --sl-color-black: #fff;
     --sl-color-gray-1: #272727;
-    --sl-color-gray-2: #383838;
-    --sl-color-gray-3: #585858;
-    --sl-color-gray-4: #8b8b8b;
+    --sl-color-gray-2: #3e3e3e;
+    --sl-color-gray-3: #666;
+    --sl-color-gray-4: #9b9b9b;
     --sl-color-gray-5: #c2c2c2;
-    --sl-color-gray-6: #eee;
+    --sl-color-gray-6: #f0f0f0;
     --sl-color-gray-7: #f6f6f6;
     --sl-color-white: #181818;
-    --yellow-hsl: 47.9, 95.8%, 53.1%;
-    --border-yellow: 54.9, 96.7%, 88%;
-    --border: hsla(var(--border-yellow), .4);
+    --purple-hsl: 268, 50%, 60%;
+    --border-purple: 268, 58%, 80%;
+    --border: hsla(var(--border-purple), .4);
 }
 
+/* Background Gradients */
 .page {
-    background: linear-gradient(215deg, var(--overlay-yellow), transparent 40%), radial-gradient(var(--overlay-yellow), transparent 40%) no-repeat center center / cover, radial-gradient(var(--overlay-yellow), transparent 65%) no-repeat center center / cover;
+    background: linear-gradient(215deg, var(--overlay-purple), transparent 40%),
+                radial-gradient(var(--overlay-purple), transparent 40%) no-repeat center center / cover,
+                radial-gradient(var(--overlay-purple), transparent 65%) no-repeat center center / cover;
     background-blend-mode: overlay;
 }
 
+/* Header */
 header {
     border: none !important;
     padding: 0 !important;
@@ -71,11 +75,13 @@ header > div:first-of-type {
     width: auto !important;
 }
 
+/* Select Input */
 select {
     background-image: none;
     box-shadow: none;
 }
 
+/* Button Hover Effects */
 .sl-link-button.primary:hover {
     background-color: var(--primary-button-hover);
     transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
