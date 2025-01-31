@@ -93,16 +93,12 @@
 //   </div>
 // </section>
 
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { Fragment } from 'astro'; // Correct Fragment import
+import PrimaryCTA from '@components/ui/buttons/PrimaryCTA.astro';
+import SecondaryCTA from '@components/ui/buttons/SecondaryCTA.astro';
 
----
-// Import the necessary dependencies
-import { Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
-import { Fragment } from 'astro';  // Fixed the Fragment import
-import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
-import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
-
-// Define TypeScript interface for props
 interface Props {
   title: string;
   subTitle?: string;
@@ -116,22 +112,11 @@ interface Props {
   }>;
 }
 
-// Get all props with proper typing and validation
-const { 
-  title, 
-  subTitle, 
-  primaryBtn, 
-  primaryBtnURL, 
-  secondaryBtn, 
-  secondaryBtnURL, 
-  images 
-} = Astro.props;
+const { title, subTitle, primaryBtn, primaryBtnURL, secondaryBtn, secondaryBtnURL, images } = Astro.props;
 
-// Runtime validation
 if (!images?.length) {
   throw new Error('At least one image is required for the carousel');
 }
----
 
 <section class="mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full">
   <div>
@@ -159,7 +144,7 @@ if (!images?.length) {
   <div class="relative flex w-full overflow-hidden rounded-lg">
     <div class="carousel relative h-[400px] w-full touch-pan-y">
       {images.map((image, index) => (
-        <div 
+        <div
           class={`carousel-slide absolute h-full w-full transition-opacity duration-500 ${index === 0 ? "opacity-100" : "opacity-0"}`}
           data-index={index}
           role="tabpanel"
@@ -206,143 +191,121 @@ if (!images?.length) {
 </section>
 
 <script>
-  let currentIndex = 0;
-  let intervalId: ReturnType<typeof setInterval>;
-  let isTransitioning = false;
+// Carousel setup and autoplay
+let currentIndex = 0;
+let intervalId;
+let isTransitioning = false;
 
-  function setupCarousel() {
-    const carousel = document.querySelector('.carousel') as HTMLElement;
-    const slides = document.querySelectorAll('.carousel-slide') as NodeListOf<HTMLElement>;
-    const indicators = document.querySelectorAll('.carousel-indicator') as NodeListOf<HTMLElement>;
-    const prevButton = document.querySelector('.prev-slide') as HTMLButtonElement;
-    const nextButton = document.querySelector('.next-slide') as HTMLButtonElement;
+function setupCarousel() {
+  const carousel = document.querySelector('.carousel');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const indicators = document.querySelectorAll('.carousel-indicator');
+  const prevButton = document.querySelector('.prev-slide');
+  const nextButton = document.querySelector('.next-slide');
 
-    if (!carousel || !slides.length || !indicators.length || !prevButton || !nextButton) {
-      console.error('Carousel elements not found');
-      return;
-    }
-
-    function showSlide(index: number) {
-      if (isTransitioning) return;
-      isTransitioning = true;
-
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('opacity-100', i === index);
-        slide.classList.toggle('opacity-0', i !== index);
-        slide.setAttribute('aria-hidden', (i !== index).toString());
-      });
-
-      indicators.forEach((indicator, i) => {
-        indicator.classList.toggle('w-4', i === index);
-        indicator.classList.toggle('w-2', i !== index);
-        indicator.classList.toggle('bg-white', i === index);
-        indicator.classList.toggle('bg-white/50', i !== index);
-        indicator.setAttribute('aria-selected', (i === index).toString());
-      });
-
-      currentIndex = index;
-      setTimeout(() => {
-        isTransitioning = false;
-      }, 500);
-    }
-
-    function nextSlide() {
-      showSlide((currentIndex + 1) % slides.length);
-    }
-
-    function prevSlide() {
-      showSlide((currentIndex - 1 + slides.length) % slides.length);
-    }
-
-    // Touch events
-    let touchStartX = 0;
-    let touchStartY = 0;
-
-    carousel.addEventListener('touchstart', (e) => {
-      touchStartX = e.touches[0].clientX;
-      touchStartY = e.touches[0].clientY;
-    });
-
-    carousel.addEventListener('touchend', (e) => {
-      const touchEndX = e.changedTouches[0].clientX;
-      const touchEndY = e.changedTouches[0].clientY;
-
-      const deltaX = touchStartX - touchEndX;
-      const deltaY = touchStartY - touchEndY;
-
-      // Only handle horizontal swipes
-      if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
-        if (deltaX > 0) {
-          nextSlide();
-        } else {
-          prevSlide();
-        }
-      }
-    });
-
-    function startAutoplay() {
-      stopAutoplay();
-      intervalId = setInterval(nextSlide, 5000);
-    }
-
-    function stopAutoplay() {
-      if (intervalId) clearInterval(intervalId);
-    }
-
-    // Event listeners
-    prevButton.addEventListener('click', () => {
-      prevSlide();
-      stopAutoplay();
-      startAutoplay();
-    });
-
-    nextButton.addEventListener('click', () => {
-      nextSlide();
-      stopAutoplay();
-      startAutoplay();
-    });
-
-    indicators.forEach((indicator, index) => {
-      indicator.addEventListener('click', () => {
-        showSlide(index);
-        stopAutoplay();
-        startAutoplay();
-      });
-    });
-
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
-    carousel.addEventListener('focusin', stopAutoplay);
-    carousel.addEventListener('focusout', startAutoplay);
-
-    // Initialize
-    startAutoplay();
-
-    // Cleanup function
-    return () => {
-      stopAutoplay();
-      carousel.removeEventListener('mouseenter', stopAutoplay);
-      carousel.removeEventListener('mouseleave', startAutoplay);
-      carousel.removeEventListener('focusin', stopAutoplay);
-      carousel.removeEventListener('focusout', startAutoplay);
-    };
+  if (!carousel || !slides.length || !indicators.length || !prevButton || !nextButton) {
+    console.error('Carousel elements not found');
+    return;
   }
 
-  // Setup carousel when the DOM is loaded
-  let cleanup: (() => void) | undefined;
+  function showSlide(index) {
+    if (isTransitioning) return;
+    isTransitioning = true;
 
-  document.addEventListener('DOMContentLoaded', () => {
-    cleanup = setupCarousel();
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('opacity-100', i === index);
+      slide.classList.toggle('opacity-0', i !== index);
+      slide.setAttribute('aria-hidden', (i !== index).toString());
+    });
+
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle('w-4', i === index);
+      indicator.classList.toggle('w-2', i !== index);
+      indicator.classList.toggle('bg-white', i === index);
+      indicator.classList.toggle('bg-white/50', i !== index);
+      indicator.setAttribute('aria-selected', (i === index).toString());
+    });
+
+    currentIndex = index;
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 500);
+  }
+
+  function nextSlide() {
+    showSlide((currentIndex + 1) % slides.length);
+  }
+
+  function prevSlide() {
+    showSlide((currentIndex - 1 + slides.length) % slides.length);
+  }
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
   });
 
-  // Handle Astro page transitions
-  document.addEventListener('astro:page-load', () => {
-    if (cleanup) cleanup();
-    cleanup = setupCarousel();
+  carousel.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchEndY = e.changedTouches[0].clientY;
+    const deltaX = touchStartX - touchEndX;
+    const deltaY = touchStartY - touchEndY;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+      if (deltaX > 0) nextSlide();
+      else prevSlide();
+    }
   });
 
-  // Cleanup before page transitions
-  document.addEventListener('astro:before-swap', () => {
-    if (cleanup) cleanup();
+  function startAutoplay() {
+    stopAutoplay();
+    intervalId = setInterval(nextSlide, 5000);
+  }
+
+  function stopAutoplay() {
+    if (intervalId) clearInterval(intervalId);
+  }
+
+  prevButton.addEventListener('click', () => {
+    prevSlide();
+    stopAutoplay();
+    startAutoplay();
   });
+
+  nextButton.addEventListener('click', () => {
+    nextSlide();
+    stopAutoplay();
+    startAutoplay();
+  });
+
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      showSlide(index);
+      stopAutoplay();
+      startAutoplay();
+    });
+  });
+
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+  carousel.addEventListener('focusin', stopAutoplay);
+  carousel.addEventListener('focusout', startAutoplay);
+
+  startAutoplay();
+
+  return () => {
+    stopAutoplay();
+    carousel.removeEventListener('mouseenter', stopAutoplay);
+    carousel.removeEventListener('mouseleave', startAutoplay);
+    carousel.removeEventListener('focusin', stopAutoplay);
+    carousel.removeEventListener('focusout', startAutoplay);
+  };
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupCarousel();
+});
 </script>
