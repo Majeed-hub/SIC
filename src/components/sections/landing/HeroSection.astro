@@ -110,7 +110,7 @@ interface HeroSectionProps {
   primaryBtnURL?: string;
   secondaryBtn?: string;
   secondaryBtnURL?: string;
-  images: Array<{ src: ImageMetadata; alt: string }>;
+  images: Array<Fragment & { src: ImageMetadata; alt: string }>;
 }
 
 const { title, subTitle, primaryBtn, primaryBtnURL, secondaryBtn, secondaryBtnURL, images } = Astro.props as HeroSectionProps;
@@ -150,7 +150,7 @@ return (
 
 ---
 // comment
-<script>
+<script is:inline>
   let currentIndex: number = 0;
   let intervalId: NodeJS.Timeout | undefined;
   let isTransitioning: boolean = false;
