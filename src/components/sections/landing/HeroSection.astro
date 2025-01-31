@@ -122,14 +122,14 @@ if (!images || images.length === 0) {
   }
 </style>
 
-<script>
+<script is:inline>
   let currentIndex = 0;
   let intervalId;
 
   const carouselSlides = document.querySelectorAll('.carousel-slide');
   const carouselIndicators = document.querySelectorAll('.carousel-indicator');
 
-  function showSlide(index) {
+  function showSlide(index:number) {
     carouselSlides.forEach((slide, i) => {
       slide.classList.toggle('active', i === index);
     });
