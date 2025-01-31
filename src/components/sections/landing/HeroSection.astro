@@ -96,6 +96,7 @@
 ---
 //comment
 ---
+// Import required components and types---
 // Import required components and types
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
@@ -110,64 +111,60 @@ interface HeroSectionProps {
   primaryBtnURL?: string;
   secondaryBtn?: string;
   secondaryBtnURL?: string;
-  images: Array<Fragment & { src: ImageMetadata; alt: string }>;
+  images: Array<{ src: ImageMetadata; alt: string }>;
 }
 
-const { title, subTitle, primaryBtn, primaryBtnURL, secondaryBtn, secondaryBtnURL, images } = Astro.props as HeroSectionProps;
+const { title, subTitle, primaryBtn, primaryBtnURL, secondaryBtn, secondaryBtnURL, images } = Astro.props;
 
 if (!images || images.length === 0) {
   throw new Error('At least one image is required for the carousel');
 }
-
-return (
-  <section class="hero-section">
-    <h1>{title}</h1>
-    {subTitle && <p>{subTitle}</p>}
-
-    {primaryBtn && (
-      <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
-    )}
-    {secondaryBtn && (
-      <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
-    )}
-
-    <div class="carousel">
-      {/* Wrap the images in a parent div */}
-      {images.map((image, index) => (
-        <div key={index} class="carousel-image-container">
-          <Image
-            src={image.src}
-            alt={image.alt}
-            class="carousel-image"
-            loading="lazy"
-            draggable={false}
-          />
-        </div>
-      ))}
-    </div>
-  </section>
-);
-
 ---
-// comment
-<script is:inline>
-  let currentIndex: number = 0;
-  let intervalId: NodeJS.Timeout | undefined;
-  let isTransitioning: boolean = false;
+
+<section class="hero-section">
+  <h1>{title}</h1>
+  {subTitle && <p>{subTitle}</p>}
+
+  {primaryBtn && (
+    <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
+  )}
+  {secondaryBtn && (
+    <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
+  )}
+
+  <div class="carousel">
+    {images.map((image, index) => (
+      <div key={index} class="carousel-image-container">
+        <Image
+          src={image.src}
+          alt={image.alt}
+          class="carousel-image"
+          loading="lazy"
+          draggable={false}
+        />
+      </div>
+    ))}
+  </div>
+</section>
+
+<script>
+  let currentIndex = 0;
+  let intervalId;
+  let isTransitioning = false;
 
   function setupCarousel() {
-    const carousel = document.querySelector('.carousel') as HTMLElement | null;
-    const slides = document.querySelectorAll('.carousel-slide') as NodeListOf<HTMLElement>;
-    const indicators = document.querySelectorAll('.carousel-indicator') as NodeListOf<HTMLElement>;
-    const prevButton = document.querySelector('.prev-slide') as HTMLElement | null;
-    const nextButton = document.querySelector('.next-slide') as HTMLElement | null;
+    const carousel = document.querySelector('.carousel');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    const prevButton = document.querySelector('.prev-slide');
+    const nextButton = document.querySelector('.next-slide');
 
     if (!carousel || slides.length === 0 || indicators.length === 0 || !prevButton || !nextButton) {
       console.error('Carousel elements not found');
       return;
     }
 
-    const showSlide = (index: number) => {
+    const showSlide = (index) => {
       if (isTransitioning) return;
       isTransitioning = true;
 
@@ -199,15 +196,15 @@ return (
       showSlide((currentIndex - 1 + slides.length) % slides.length);
     };
 
-    let touchStartX: number = 0;
-    let touchStartY: number = 0;
+    let touchStartX = 0;
+    let touchStartY = 0;
 
-    carousel.addEventListener('touchstart', (e: TouchEvent) => {
+    carousel.addEventListener('touchstart', (e) => {
       touchStartX = e.touches[0].clientX;
       touchStartY = e.touches[0].clientY;
     });
 
-    carousel.addEventListener('touchend', (e: TouchEvent) => {
+    carousel.addEventListener('touchend', (e) => {
       const touchEndX = e.changedTouches[0].clientX;
       const touchEndY = e.changedTouches[0].clientY;
       const deltaX = touchStartX - touchEndX;
@@ -256,10 +253,8 @@ return (
     carousel.addEventListener('focusin', stopAutoplay);
     carousel.addEventListener('focusout', startAutoplay);
 
-    // Start autoplay when the carousel is initialized
     startAutoplay();
 
-    // Return cleanup function
     return () => {
       stopAutoplay();
       carousel.removeEventListener('mouseenter', stopAutoplay);
