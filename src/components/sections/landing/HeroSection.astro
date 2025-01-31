@@ -93,11 +93,12 @@
 //   </div>
 // </section>
 
+
 ---
 // Import the necessary dependencies
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
-import { Fragment } from 'astro/components';  // Added missing Fragment import
+import { Fragment } from 'astro';  // Fixed the Fragment import
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
 
@@ -132,20 +133,14 @@ if (!images?.length) {
 }
 ---
 
-<section
-  class="mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full"
->
+<section class="mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full">
   <div>
-    <h1
-      class="block text-balance text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-4xl lg:text-6xl lg:leading-tight"
-    >
-      <Fragment set:html={title} />
+    <h1 class="block text-balance text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-4xl lg:text-6xl lg:leading-tight">
+      <Fragment>{title}</Fragment> <!-- Corrected Fragment usage -->
     </h1>
-    
+
     {subTitle && (
-      <p
-        class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5"
-      >
+      <p class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5">
         {subTitle}
       </p>
     )}
@@ -165,10 +160,7 @@ if (!images?.length) {
     <div class="carousel relative h-[400px] w-full touch-pan-y">
       {images.map((image, index) => (
         <div 
-          class:list={[
-            "carousel-slide absolute h-full w-full transition-opacity duration-500",
-            index === 0 ? "opacity-100" : "opacity-0"
-          ]}
+          class={`carousel-slide absolute h-full w-full transition-opacity duration-500 ${index === 0 ? "opacity-100" : "opacity-0"}`}
           data-index={index}
           role="tabpanel"
           aria-label={`Slide ${index + 1} of ${images.length}`}
@@ -186,19 +178,13 @@ if (!images?.length) {
     </div>
 
     <!-- Navigation Buttons -->
-    <button 
-      class="prev-slide absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-800 shadow-lg transition-colors hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-      aria-label="Previous slide"
-    >
+    <button class="prev-slide absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-800 shadow-lg transition-colors hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Previous slide">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
     </button>
 
-    <button 
-      class="next-slide absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-800 shadow-lg transition-colors hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-      aria-label="Next slide"
-    >
+    <button class="next-slide absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-800 shadow-lg transition-colors hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Next slide">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
@@ -208,10 +194,7 @@ if (!images?.length) {
     <div class="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
       {images.map((_, index) => (
         <button
-          class:list={[
-            "carousel-indicator h-2 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500",
-            index === 0 ? "w-4 bg-white" : "w-2 bg-white/50"
-          ]}
+          class={`carousel-indicator h-2 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 ${index === 0 ? "w-4 bg-white" : "w-2 bg-white/50"}`}
           data-index={index}
           role="tab"
           aria-label={`Go to slide ${index + 1}`}
@@ -283,7 +266,7 @@ if (!images?.length) {
     carousel.addEventListener('touchend', (e) => {
       const touchEndX = e.changedTouches[0].clientX;
       const touchEndY = e.changedTouches[0].clientY;
-      
+
       const deltaX = touchStartX - touchEndX;
       const deltaY = touchStartY - touchEndY;
 
