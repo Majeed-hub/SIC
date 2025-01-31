@@ -32,7 +32,7 @@ const avatarSrcs: Array<string> = [
 
 <MainLayout>
 
-  <HeroSection
+  <!-- <HeroSection
     title=`Qatar's Leading PET Preform <span
         class="text-maroon-700 dark:text-maroon-700">Manufacturer</span>`
     subTitle="Innovative Excellence in Plastic Solutions for Water, Juice & Dairy Packaging."
@@ -43,8 +43,17 @@ const avatarSrcs: Array<string> = [
     images={images}
     src={heroImage}
     alt="Stack of Water Preform product"
-  />
-
+  /> -->
+  <HeroSection
+  title={`Qatar's Leading PET Preform <span
+    class="text-maroon-700 dark:text-maroon-700">Manufacturer</span>`}
+  subTitle="Innovative Excellence in Plastic Solutions for Water, Juice & Dairy Packaging."
+  primaryBtn="Start Exploring"
+  primaryBtnURL="/products"
+  secondaryBtn="Contact us"
+  secondaryBtnURL="/contact"
+  images={images}
+/>
 
 
   <FeaturesGeneral
