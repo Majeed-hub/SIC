@@ -95,102 +95,55 @@
 
 ---
 //comment
-import { Image } from 'astro:assets';
+---
+// Import required components and types
 import type { ImageMetadata } from 'astro';
-import { Fragment } from 'astro'; // Correct Fragment import
-import PrimaryCTA from '@components/ui/buttons/PrimaryCTA.astro';
-import SecondaryCTA from '@components/ui/buttons/SecondaryCTA.astro';
+import { Image } from 'astro:assets';
+import PrimaryCTA from './PrimaryCTA';
+import SecondaryCTA from './SecondaryCTA';
 
-interface Props {
+// Define props
+interface HeroSectionProps {
   title: string;
   subTitle?: string;
   primaryBtn?: string;
   primaryBtnURL?: string;
   secondaryBtn?: string;
   secondaryBtnURL?: string;
-  images: Array<{
-    src: ImageMetadata;
-    alt: string;
-  }>;
+  images: Array<{ src: ImageMetadata; alt: string }>;
 }
----
-const { title, subTitle, primaryBtn, primaryBtnURL, secondaryBtn, secondaryBtnURL, images } = Astro.props;
 
-if (!images?.length) {
+const { title, subTitle, primaryBtn, primaryBtnURL, secondaryBtn, secondaryBtnURL, images } = Astro.props as HeroSectionProps;
+
+if (!images || images.length === 0) {
   throw new Error('At least one image is required for the carousel');
 }
-
-<section class="mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full">
-  <div>
-    <h1 class="block text-balance text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-4xl lg:text-6xl lg:leading-tight">
-      <Fragment>{title}</Fragment> <!-- Corrected Fragment usage -->
-    </h1>
-
-    {subTitle && (
-      <p class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5">
-        {subTitle}
-      </p>
-    )}
-
-    <div class="mt-7 grid w-full gap-3 sm:inline-flex">
-      {primaryBtn && (
-        <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
-      )}
-      {secondaryBtn && (
-        <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
-      )}
-    </div>
-  </div>
 ---
-  <!-- Right column with image carousel -->
-  <div class="relative flex w-full overflow-hidden rounded-lg">
-    <div class="carousel relative h-[400px] w-full touch-pan-y">
-      {images.map((image, index) => (
-        <div
-          class={`carousel-slide absolute h-full w-full transition-opacity duration-500 ${index === 0 ? "opacity-100" : "opacity-0"}`}
-          data-index={index}
-          role="tabpanel"
-          aria-label={`Slide ${index + 1} of ${images.length}`}
-        >
-          <Image
-            src={image.src}
-            alt={image.alt}
-            class="h-full w-full scale-110 object-cover object-center"
-            draggable={false}
-            loading={index === 0 ? "eager" : "lazy"}
-            format="avif"
-          />
-        </div>
-      ))}
-    </div>
----
-    <!-- Navigation Buttons -->
-    <button class="prev-slide absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-800 shadow-lg transition-colors hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Previous slide">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-      </svg>
-    </button>
 
-    <button class="next-slide absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-800 shadow-lg transition-colors hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Next slide">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-      </svg>
-    </button>
+<section class="hero-section">
+  <h1>{title}</h1>
+  {subTitle && <p>{subTitle}</p>}
 
-    <!-- Indicators -->
-    <div class="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-      {images.map((_, index) => (
-        <button
-          class={`carousel-indicator h-2 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 ${index === 0 ? "w-4 bg-white" : "w-2 bg-white/50"}`}
-          data-index={index}
-          role="tab"
-          aria-label={`Go to slide ${index + 1}`}
-          aria-selected={index === 0}
-        />
-      ))}
-    </div>
+  {primaryBtn && (
+    <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
+  )}
+  {secondaryBtn && (
+    <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
+  )}
+
+  <div class="carousel">
+    {images.map((image, index) => (
+      <Image
+        src={image.src}
+        alt={image.alt}
+        class="carousel-image"
+        loading="lazy"
+        draggable={false}
+      />
+    ))}
   </div>
 </section>
+
 ---
 // comment
 <script>
