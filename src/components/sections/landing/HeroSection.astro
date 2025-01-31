@@ -2,8 +2,6 @@
 // Import required components and types
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
-import PrimaryCTA from './PrimaryCTA';
-import SecondaryCTA from './SecondaryCTA';
 
 // Define props
 interface HeroSectionProps {
@@ -27,11 +25,12 @@ if (!images || images.length === 0) {
   <h1>{title}</h1>
   {subTitle && <p>{subTitle}</p>}
 
-  {primaryBtn && (
-    <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
+  {primaryBtn && primaryBtnURL && (
+    <a href={primaryBtnURL} class="primary-cta">{primaryBtn}</a>
   )}
-  {secondaryBtn && (
-    <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
+
+  {secondaryBtn && secondaryBtnURL && (
+    <a href={secondaryBtnURL} class="secondary-cta">{secondaryBtn}</a>
   )}
 
   <div class="carousel">
