@@ -111,6 +111,7 @@ interface HeroSectionProps {
   secondaryBtn?: string;
   secondaryBtnURL?: string;
   images: Array<{ src: ImageMetadata; alt: string }>;
+  
 }
 
 const { title, subTitle, primaryBtn, primaryBtnURL, secondaryBtn, secondaryBtnURL, images } = Astro.props as HeroSectionProps;
@@ -133,14 +134,15 @@ if (!images || images.length === 0) {
 
   <div class="carousel">
     {images.map((image, index) => (
-      <Image
-        src={image.src}
-        alt={image.alt}
-        class="carousel-image"
-        loading="lazy"
-        draggable={false}
-      />
-    ))}
+  <Image
+    key={index} // Add the key attribute
+    src={image.src}
+    alt={image.alt}
+    class="carousel-image"
+    loading="lazy"
+    draggable={false}
+  />
+))}
   </div>
 </section>
 
