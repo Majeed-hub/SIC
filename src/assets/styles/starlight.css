@@ -182,3 +182,8 @@ article.card {
     padding-inline: 1.5rem !important;
   }
 }
+/* Global CSS solution */
+.text-neutral-600, .text-neutral-400 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
