@@ -35,7 +35,7 @@ if (!images || images.length === 0) {
 
   <div class="carousel">
     {images.map((image, index) => (
-      <div key={index} class="carousel-image-container">
+      <div key={`image-${index}`} class="carousel-slide">
         <Image
           src={image.src}
           alt={image.alt}
@@ -45,129 +45,152 @@ if (!images || images.length === 0) {
         />
       </div>
     ))}
+    <button class="carousel-prev">&#10094;</button>
+    <button class="carousel-next">&#10095;</button>
+  </div>
+
+  <div class="carousel-indicators">
+    {images.map((_, index) => (
+      <span key={`indicator-${index}`} class="carousel-indicator" data-index={index}></span>
+    ))}
   </div>
 </section>
 
+<style>
+  .hero-section {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .carousel-slide {
+    display: none;
+    width: 100%;
+  }
+
+  .carousel-slide.active {
+    display: block;
+  }
+
+  .carousel-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .carousel-prev {
+    left: 10px;
+  }
+
+  .carousel-next {
+    right: 10px;
+  }
+
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .carousel-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .carousel-indicator.active {
+    background-color: #333;
+  }
+</style>
+
 <script>
   let currentIndex = 0;
-  let intervalId;
-  let isTransitioning = false;
+  let intervalId: number | undefined;
 
-  function setupCarousel() {
-    const carousel = document.querySelector('.carousel');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const indicators = document.querySelectorAll('.carousel-indicator');
-    const prevButton = document.querySelector('.prev-slide');
-    const nextButton = document.querySelector('.next-slide');
+  const carouselSlides = document.querySelectorAll('.carousel-slide');
+  const carouselIndicators = document.querySelectorAll('.carousel-indicator');
 
-    if (!carousel || slides.length === 0 || indicators.length === 0 || !prevButton || !nextButton) {
-      console.error('Carousel elements not found');
-      return;
+  function showSlide(index: number) {
+    carouselSlides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+
+    carouselIndicators.forEach((indicator, i) => {
+      indicator.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % carouselSlides.length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + carouselSlides.length) % carouselSlides.length;
+    showSlide(currentIndex);
+  }
+
+  function startAutoplay() {
+    intervalId = setInterval(nextSlide, 5000) as unknown as number;
+  }
+
+  function stopAutoplay() {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = undefined;
     }
+  }
 
-    const showSlide = (index) => {
-      if (isTransitioning) return;
-      isTransitioning = true;
+  // Initialize carousel
+  document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentIndex);
+    startAutoplay();
 
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('opacity-100', i === index);
-        slide.classList.toggle('opacity-0', i !== index);
-        slide.setAttribute('aria-hidden', (i !== index).toString());
-      });
-
-      indicators.forEach((indicator, i) => {
-        indicator.classList.toggle('w-4', i === index);
-        indicator.classList.toggle('w-2', i !== index);
-        indicator.classList.toggle('bg-white', i === index);
-        indicator.classList.toggle('bg-white/50', i !== index);
-        indicator.setAttribute('aria-selected', (i === index).toString());
-      });
-
-      currentIndex = index;
-      setTimeout(() => {
-        isTransitioning = false;
-      }, 500);
-    };
-
-    const nextSlide = () => {
-      showSlide((currentIndex + 1) % slides.length);
-    };
-
-    const prevSlide = () => {
-      showSlide((currentIndex - 1 + slides.length) % slides.length);
-    };
-
-    let touchStartX = 0;
-    let touchStartY = 0;
-
-    carousel.addEventListener('touchstart', (e) => {
-      const touchEvent = e as TouchEvent; // Cast to TouchEvent
-      touchStartX = touchEvent.touches[0].clientX;
-      touchStartY = touchEvent.touches[0].clientY;
-    });
-
-    carousel.addEventListener('touchend', (e) => {
-      const touchEvent = e as TouchEvent; // Cast to TouchEvent
-      const touchEndX = touchEvent.changedTouches[0].clientX;
-      const touchEndY = touchEvent.changedTouches[0].clientY;
-      const deltaX = touchStartX - touchEndX;
-      const deltaY = touchStartY - touchEndY;
-
-      if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
-        if (deltaX > 0) nextSlide();
-        else prevSlide();
-      }
-    });
-
-    const startAutoplay = () => {
-      stopAutoplay();
-      intervalId = setInterval(nextSlide, 5000);
-    };
-
-    const stopAutoplay = () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-        intervalId = undefined;
-      }
-    };
-
-    prevButton.addEventListener('click', () => {
+    // Add event listeners for buttons
+    document.querySelector('.carousel-prev')?.addEventListener('click', () => {
       prevSlide();
       stopAutoplay();
       startAutoplay();
     });
 
-    nextButton.addEventListener('click', () => {
+    document.querySelector('.carousel-next')?.addEventListener('click', () => {
       nextSlide();
       stopAutoplay();
       startAutoplay();
     });
 
-    indicators.forEach((indicator, index) => {
+    // Add event listeners for indicators
+    carouselIndicators.forEach((indicator, index) => {
       indicator.addEventListener('click', () => {
-        showSlide(index);
+        currentIndex = index;
+        showSlide(currentIndex);
         stopAutoplay();
         startAutoplay();
       });
     });
 
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
-    carousel.addEventListener('focusin', stopAutoplay);
-    carousel.addEventListener('focusout', startAutoplay);
-
-    startAutoplay();
-
-    return () => {
-      stopAutoplay();
-      carousel.removeEventListener('mouseenter', stopAutoplay);
-      carousel.removeEventListener('mouseleave', startAutoplay);
-      carousel.removeEventListener('focusin', stopAutoplay);
-      carousel.removeEventListener('focusout', startAutoplay);
-    };
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    setupCarousel();
+    // Pause autoplay on hover
+    document.querySelector('.carousel')?.addEventListener('mouseenter', stopAutoplay);
+    document.querySelector('.carousel')?.addEventListener('mouseleave', startAutoplay);
   });
 </script>
