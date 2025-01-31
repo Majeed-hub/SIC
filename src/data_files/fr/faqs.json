@@ -1,29 +1,37 @@
 {
-  "subTitle": "Posez-nous toutes vos questions sur notre marque et nos produits, et obtenez des réponses factuelles.",
+  "subTitle": "هل لديك أسئلة حول قوالب PET أو خدمات التصنيع لدينا؟ ابحث عن إجابات للأسئلة الشائعة أدناه.",
   "faqs": [
     {
-      "question": "Quels types d'outils sont inclus dans le Kit de Démarrage?",
-      "answer": "Le Kit de Démarrage comprend des outils à main et électriques essentiels pour différents projets de bricolage, notamment des marteaux, des perceuses, des tournevis et une variété de fixations. C'est une sélection soigneusement élaborée pour aider les débutants et les bricoleurs expérimentés à aborder la plupart des tâches d'amélioration de l'habitat."
+      "question": "ما هي أنواع قوالب PET التي تصنعونها؟",
+      "answer": "نحن نختص في إنتاج قوالب PET عالية الجودة لتعبئة المياه والعصائر ومنتجات الألبان. تأتي قوالبنا بأحجام مختلفة ونهايات عنق متنوعة لتلبية متطلبات العملاء المتنوعة."
     },
     {
-      "question": "Puis-je passer du Kit de Démarrage à la Boîte à Outils Professionnelle?",
-      "answer": "Absolument ! Vous pouvez passer à la Boîte à Outils Professionnelle à tout moment pour accéder à une gamme plus large d'outils de haute qualité, bénéficier d'un support client prioritaire et recevoir un contenu exclusif. Contactez notre équipe de support pour une transition sans problème."
+      "question": "ما هي طاقتكم الإنتاجية؟",
+      "answer": "يتمتع مصنعنا بقدرة إنتاجية شهرية تصل إلى 80 مليون قالب PET، مدعومة بـ 6 خطوط إنتاج متطورة تعمل بآلات Milacron ذات 72 تجويف."
     },
     {
-      "question": "Quels sont les rabais disponibles pour les commandes en gros via le plan Boîte à Outils Professionnelle?",
-      "answer": "Les membres de la Boîte à Outils Professionnelle ont droit à des rabais exclusifs sur les commandes en gros, dont le pourcentage peut varier en fonction du volume de la commande. Contactez-nous pour discuter de vos besoins, et nous vous fournirons une structure de rabais personnalisée."
+      "question": "هل تقدمون تصاميم مخصصة للقوالب؟",
+      "answer": "نعم، نقوم بتصميم وتصنيع قوالب PET مخصصة لتلبية احتياجات العملاء المحددة. يضمن فريقنا توزيعًا مثاليًا للمواد وسمكًا موحدًا للجدار لأداء فائق."
     },
     {
-      "question": "À quoi puis-je m'attendre en termes de support client?",
-      "answer": "Tous nos clients bénéficient d'un support par e-mail dédié. Avec le Kit de Démarrage, vous recevrez notre support standard, tandis que le plan Boîte à Outils Professionnelle vous mettra à niveau vers un support prioritaire, ce qui signifie des temps de réponse plus rapides et une assistance spécialisée."
+      "question": "ما هي شهادات الجودة التي يحملها مصنعكم؟",
+      "answer": "نحن حاصلون على شهادات ISO 9001:2015 (إدارة الجودة)، ISO 14001:2015 (إدارة البيئة)، ISO 45001:2018 (الصحة والسلامة المهنية)، و ISO 22000:2018 (إدارة سلامة الغذاء)."
     },
     {
-      "question": "À quelle fréquence sont mises à jour les ressources en ligne et les tutoriels?",
-      "answer": "Nous mettons régulièrement à jour nos ressources en ligne et nos tutoriels pour refléter les dernières tendances en matière de bricolage et de construction, ainsi que les introductions de nouveaux outils et techniques. Notre matériel vise à être complet et convivial pour tous les niveaux de compétence."
+      "question": "هل يمكنكم التعامل مع تطبيقات التعبئة الساخنة والباردة؟",
+      "answer": "نعم، تم تصميم قوالب PET الخاصة بنا لتلائم التعبئة الساخنة (حتى 80°C) والباردة، مما يضمن معالجة معقمة وعمر تخزين طويل للمشروبات."
     },
     {
-      "question": "ScrewFast propose-t-il des services pour les grands projets de construction?",
-      "answer": "Oui, nos Solutions Entreprise sont conçues pour les grandes entreprises ayant besoin de services complets. Nous fournissons des consultations, de la planification et de l'approvisionnement en outils et matériaux de haute qualité, ainsi que des solutions de personnel pour des besoins de construction importants. Contactez-nous pour un devis personnalisé."
+      "question": "أين يقع مصنعكم؟",
+      "answer": "يقع مصنعنا في المنطقة الصناعية الجديدة، الدوحة، قطر، بمساحة مبنية تبلغ 16,000 متر مربع. يتميز المرفق بآلات متطورة وفريق من المحترفين المهرة."
+    },
+    {
+      "question": "كيف يمكنني التواصل مع فريق المبيعات لديكم؟",
+      "answer": "يمكنك التواصل مع فريق المبيعات لدينا عبر الهاتف على الرقم +974 4441 1305، أو عبر البريد الإلكتروني info@sic-q.com، أو من خلال زيارة موقعنا الإلكتروني www.sic-q.com."
+    },
+    {
+      "question": "هل تقدمون عينات للاختبار؟",
+      "answer": "نعم، نقدم عينات من قوالب PET الخاصة بنا للاختبار والتقييم. تواصل معنا لطلب عينات مخصصة وفقًا لمتطلباتك الخاصة."
     }
   ]
 }

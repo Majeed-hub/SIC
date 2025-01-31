@@ -1,22 +1,22 @@
 [
   {
-    "heading": "Équipes dédiées",
-    "content": "Bénéficiez de nos équipes engagées qui veillent à ce que votre réussite soit personnelle. Comptez sur un accompagnement expert et des résultats exceptionnels tout au long de votre parcours de projet.",
+    "heading": "تصنيع متطور",
+    "content": "نحن مجهزون بآلات صب حقن Milacron لإنتاج قوالب PET عالية الجودة ذات أسطح ناعمة.",
     "svg": "groups"
   },
   {
-    "heading": "Simplicité et accessibilité",
-    "content": "Trouvez des solutions faciles à utiliser et abordables avec la gamme d'outils et d'équipements de ScrewFast. Nos produits simplifient l'approvisionnement et permettent de respecter les budgets de projet.",
-    "svg": "verified"
-  },
-  {
-    "heading": "Documentation complète",
-    "content": "Intégrez facilement grâce aux guides exhaustifs et aux bibliothèques de ScrewFast. Réalisez une adoption de produit sans faille avec notre ensemble complet de documentation conçu pour votre succès.",
+    "heading": "طاقة إنتاجية عالية",
+    "content": "بإنتاجية تصل إلى 80 مليون قالب شهريًا، نلبي احتياجات الأسواق المحلية والدولية.",
     "svg": "books"
   },
   {
-    "heading": "Conception centrée sur l'utilisateur",
-    "content": "Faites l'expérience de la différence avec la conception axée sur l'utilisateur de ScrewFast, où la fonctionnalité rencontre la praticité pour une expérience de travail améliorée.",
+    "heading": "مراقبة جودة صارمة",
+    "content": "نلتزم بشهادات ISO 9001 و 14001 و 45001 و ISO 22000، مع تطبيق إجراءات جودة صارمة.",
+    "svg": "verified"
+  },
+  {
+    "heading": "حلول مبتكرة ومستدامة",
+    "content": "نستثمر باستمرار في البحث والتطوير لتطوير قوالب خفيفة الوزن تحافظ على المتانة.",
     "svg": "frame"
   }
 ]

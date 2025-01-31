@@ -7,18 +7,13 @@ import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
-import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
-import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
-import heroImage from "@images/hero-image.avif";
+import heroImage from "@images/Untitled design.png";
 import faqs from "@data/fr/faqs.json";
 import features from "@data/fr/features.json";
-import pricing from "@data/fr/pricing.json";
-import featureImage from "@images/features-image.jpg";
 import construction from "@images/construction-image.avif";
 import tools from "@images/automated-tools.avif";
 import dashboard from "@images/dashboard-image.avif";
-import { getRelativeLocaleUrl } from "astro:i18n";
 import { partnersData } from "@/data_files/constants";
 
 const avatarSrcs: Array<string> = [
@@ -29,119 +24,107 @@ const avatarSrcs: Array<string> = [
 ];
 ---
 
-<MainLayout lang="fr">
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Découvrez ScrewFast sur GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
+<MainLayout>
 
   <HeroSection
-    title=`Équipez vos projets avec <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Outils matériels de haute qualité et services de construction experts pour tous les besoins en projet."
-    primaryBtn="Commencez à explorer"
-    primaryBtnURL={getRelativeLocaleUrl("fr", "products")}
-    secondaryBtn="Contacter l'équipe commerciale"
-    secondaryBtnURL={getRelativeLocaleUrl("fr", "contact")}
-    withReview={true}
-    avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
-    starCount={4}
-    reviews=`À partir de plus de <span class="font-bold">12,8k</span> avis`
+    title=`الرائدة في قطر في تصنيع <span
+        class="text-maroon-700 dark:text-maroon-700">قوالب البولي إيثيلين تيريفثالات (PET)</span>`
+    subTitle="تميز مبتكر في حلول البلاستيك لتعبئة المياه والعصائر ومنتجات الألبان."
+    primaryBtn="ابدأ الاستكشاف"
+    primaryBtnURL="/products"
+    secondaryBtn="اتصل بنا"
+    secondaryBtnURL="/contact"
     src={heroImage}
-    alt="Pile de boîtes de produits ScrewFast contenant des outils matériels assortis"
+    alt="منتجات قوالب تعبئة المياه"
   />
 
   <ClientsSection
-    title="Faites confiance aux leaders de l'industrie"
-    subTitle="Découvrez la fiabilité choisie par les géants de l'industrie."
+    title="موثوق به من قبل قادة الصناعة"
+    subTitle="جرب الموثوقية التي اختارها عمالقة الصناعة."
     partners={partnersData}
   />
 
   <FeaturesGeneral
-    title="Répondre aux exigences de l'industrie"
-    subTitle="Chez ScrewFast, nous relevons les défis uniques rencontrés dans les secteurs du matériel et de la construction. Des outils de pointe aux services experts, nous sommes déterminés à vous aider à surmonter les obstacles et à atteindre vos objectifs."
-    src={featureImage}
-    alt="Produits ScrewFast dans des boîtes flottantes"
-    features={features}
-  />
+  title="التميز في تصنيع قوالب البولي إيثيلين تيريفثالات (PET)"
+  subTitle="في مصنع قطر الدولي للبلاستيك، نختص في إنتاج قوالب PET عالية الجودة لتعبئة المياه والعصائر ومنتجات الألبان."
+  features={features} 
+/>
 
-  <FeaturesNavs
-    title=`Personnalisez les offres de <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span> pour répondre parfaitement à vos besoins en matériel et en construction.`
-    tabs={[
-      {
-        heading: "Outils de pointe",
-        content:
-          "Optimisez vos projets avec les outils de pointe de ScrewFast. Faites l'expérience d'une efficacité accrue dans la gestion de la construction avec nos solutions automatisées sophistiquées.",
-        svg: "tools",
-        src: tools,
-        alt: "Équipement lourd jaune et noir sur un champ d'herbe brune",
-        first: true,
-      },
-      {
-        heading: "Tableaux de bord intuitifs",
-        content:
-          "Naviguez facilement avec les tableaux de bord intuitifs de ScrewFast. Configurez et supervisez vos projets de manière transparente, avec des interfaces conviviales conçues pour une gestion efficace des flux de travail rapide et efficace.",
-        svg: "dashboard",
-        src: dashboard,
-        alt: "Capture d'écran ou représentation graphique du tableau de bord intuitif",
-        second: true,
-      },
-      {
-        heading: "Fonctionnalités robustes",
-        content:
-          "Minimisez la complexité, maximisez la productivité. Les fonctionnalités robustes de ScrewFast sont conçues pour rationaliser votre processus de construction, offrant des résultats qui se distinguent par leur excellence.",
-        svg: "house",
-        src: construction,
-        alt: "Structure métallique grise d'un bâtiment près d'une grue à tour pendant la journée",
-      },
-    ]}
-  />
+
+<FeaturesNavs
+  title={`قم بتخصيص عروض <span class="text-yellow-500 dark:text-yellow-400">مصنع قطر الدولي للبلاستيك</span> لتلائم احتياجات التعبئة الخاصة بك.`}
+  tabs={[
+    {
+      heading: "قوالب PET ذات التقنية المتطورة",
+      content:
+        "نختص في إنتاج قوالب PET عالية الجودة للمياه والعصائر ومنتجات الألبان، باستخدام آلات Milacron المتطورة.",
+      svg: "tools",
+      src: tools,
+      alt: "قوالب PET على خط الإنتاج",
+      first: true,
+    },
+    {
+      heading: "حلول مخصصة للتعبئة الساخنة والباردة",
+      content:
+        "قوالب PET الخاصة بنا مصممة لتلائم التعبئة الساخنة (حتى 80°C) والباردة، وفقًا لأعلى المعايير الصناعية.",
+      svg: "dashboard",
+      src: dashboard,
+      alt: "قوالب PET مخصصة للتعبئة الساخنة والباردة",
+      second: true,
+    },
+    {
+      heading: "ضمان الجودة والابتكار",
+      content:
+        "نضمن أعلى معايير الجودة باستخدام أدوات متطورة، مع الابتكار المستمر في منتجات القوالب الجديدة.",
+      svg: "house",
+      src: construction,
+      alt: "أدوات ضمان الجودة في المصنع",
+    },
+  ]}
+/>
 
   <TestimonialsSection
-    title="Accélérez vos projets"
-    subTitle="Chez ScrewFast, nous assurons un démarrage rapide avec une configuration de compte instantanée. Découvrez la vitesse de la construction redéfinie."
+    title="سرّع إنتاجك"
+    subTitle="في مصنع قطر الدولي للبلاستيك، نضمن بدءًا سريعًا مع إعداد فوري للإنتاج. جرب سرعة التصنيع التي أعيد تعريفها."
     testimonials={[
       {
         content:
-          "ScrewFast a considérablement augmenté l'efficacité de notre projet. La configuration a été instantanée et leurs temps de réponse rapides sont phénoménaux. Vraiment un changement de jeu dans le support matériel et de construction !",
-        author: "Samantha Ruiz",
-        role: "Directrice des opérations | ConstructIt Inc.",
+        "مصنع قطر الدولي للبلاستيك عزز بشكل كبير كفاءة إنتاجنا. كان الإعداد فوريًا، وأوقات الاستجابة السريعة مذهلة. حقًا محور تغيير في صناعة البلاستيك!",
+        author: "سامانثا رويز",
+        role: "مديرة العمليات | شركة ConstructIt",
         avatarSrc:
           "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
       },
     ]}
     statistics={[
       {
-        count: "70k+",
+        count: "80M+",
         description:
-          "clients équipés — des bricoleurs aux grandes entreprises de construction",
+          "قوالب تُنتج شهريًا — من الإنتاج الصغير إلى الكبير",
       },
       {
-        count: "35%",
+        count: "18k+",
         description:
-          "hausse de l'efficacité des projets avec les outils et services de ScrewFast",
+          "طن من المنتجات النهائية سنويًا",
       },
       {
-        count: "15,3%",
+        count: "6",
         description:
-          "réduction des coûts de maintenance rapportée par des clients à long terme",
+          "خطوط إنتاج بتقنية دولية حديثة",
       },
       {
         count: "2x",
-        description:
-          "assemblage plus rapide grâce à des solutions de fixation innovantes",
+        description: "إنتاج أسرع باستخدام حلول بلاستيكية مبتكرة",
       },
     ]}
   />
 
-  <PricingSection pricing={pricing} />
+  <!-- <PricingSection pricing={pricing} /> -->
 
-  <FAQ title="Questions<br />fréquemment posées" faqs={faqs} />
+  <FAQ title="الأسئلة<br />الشائعة" faqs={faqs} />
 
-  <HeroSectionAlt
-    title="Construisons ensemble"
-    subTitle="ScrewFast est un modèle open source, méticuleusement conçu avec les frameworks Astro, Tailwind CSS et Preline UI."
-    url="https://github.com/mearashadowfax/ScrewFast"
+ <HeroSectionAlt
+  title="لنبتكر معًا"
+  subTitle="شريكك الموثوق في إنتاج قوالب PET عالية الجودة لتعبئة المياه والعصائر ومنتجات الألبان."
   />
 </MainLayout>
