@@ -23,40 +23,28 @@ const product: CollectionEntry<"products">[] = (
 );
 
 // Define variables for page content
-const title: string = "Products";
+const title: string = "Our Products";
 const subTitle: string =
-  "Explore the durability and precision of ScrewFast tools, designed for both professionals and enthusiasts. Each of our products is crafted with precision and built to last, ensuring you have the right tool for every job.";
+  "Discover our high-quality PET preforms, designed for exceptional durability and sustainability. Our precision-engineered products ensure superior performance for beverage, food, and pharmaceutical packaging solutions.";
 
 // Testimonial data that will be rendered in the component
 const testimonials = [
-  // First testimonial data
   {
     content:
-      " \"Since switching to ScrewFast's hardware tools, the efficiency on our construction sites has skyrocketed. The durability of the hex bolts and precision of the machine screws are simply unmatched. It's refreshing to work with a company that truly understands the daily demands of the industry.\" ",
-    author: "Jason Clark",
-    role: "Site Foreman | TopBuild",
+      " \"Our partnership with this factory has significantly improved our packaging quality. The PET preforms are incredibly durable and meet all our requirements. Their customer service is outstanding.\" ",
+    author: "Ahmed Al-Mansoori",
+    role: "Operations Manager | Gulf Beverages",
     avatarSrc:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-    avatarAlt: "Image Description",
+    avatarAlt: "Image",
   },
-  // Second testimonial data
   {
     content:
-      " \"As an interior designer, I'm always looking for high-quality materials and tools that help bring my visions to life. ScrewFast's mixed screws assortment has been a game-changer for my projects, providing the perfect blend of quality and variety. The outstanding customer support was just the cherry on top!\" ",
-    author: "Maria Gonzalez",
-    role: "Interior Designer | Creative Spaces",
+      " \"The PET preforms from this factory have exceeded our expectations in terms of quality and sustainability. We highly recommend their products for any packaging needs.\" ",
+    author: "Fatima Khalid",
+    role: "Procurement Head | Al Noor Industries",
     avatarSrc:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-    avatarAlt: "Image Description",
-  },
-  // Third testimonial data
-  {
-    content:
-      " \"I’ve been a professional carpenter for over 15 years, and I can sincerely say that ScrewFast’s tap bolts and nuts are some of the best I've used. They grip like no other, and I have full confidence in every joint and fixture. Plus, the service is impeccable – they truly care about my project's success.\" ",
-    author: "Richard Kim",
-    role: "Master Carpenter | WoodWright",
-    avatarSrc:
-      "https://images.unsplash.com/photo-1474176857210-7287d38d27c6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
     avatarAlt: "Image Description",
   },
 ];
@@ -69,32 +57,28 @@ const pageTitle: string = `Products | ${SITE.title}`;
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/products",
-    "url": "https://screwfast.uk/products",
-    "name": "Hardware Tools | ScrewFast",
-    "description": "Explore the durability and precision of ScrewFast tools, designed for both professionals and enthusiasts.",
+    "@id": "https://plasticfactory.qa/products",
+    "url": "https://plasticfactory.qa/products",
+    "name": "PET Preforms | Our Products",
+    "description": "Discover our high-quality PET preforms, designed for exceptional durability and sustainability.",
     "isPartOf": {
       "@type": "WebSite",
-      "url": "https://screwfast.uk",
-      "name": "ScrewFast",
-      "description": "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs."
+      "url": "https://plasticfactory.qa",
+      "name": "SIC Qatar",
+      "description": "Leading manufacturer of PET preforms for beverage, food, and pharmaceutical packaging solutions."
     },
     "inLanguage": "en-US"
   }}
 >
-  <div
-    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
-  >
+  <div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
     <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
       <div class="flex items-center gap-12">
-        <h1
-          class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
-        >
+        <h1 class="text-balance text-2xl font-bold tracking-tight text-primary dark:text-primary-light md:text-4xl md:leading-tight">
           {title}
         </h1>
         {
           subTitle && (
-            <p class="hidden max-w-screen-sm text-pretty text-neutral-600 dark:text-neutral-400 md:block">
+            <p class="hidden max-w-screen-sm text-pretty text-secondary dark:text-secondary-light md:block">
               {subTitle}
             </p>
           )
@@ -102,8 +86,7 @@ const pageTitle: string = `Products | ${SITE.title}`;
       </div>
       <PrimaryCTA title="Customer Stories" url="#testimonials" noArrow={true} />
     </div>
-    <!--Displaying products in alternating styles. Alternative product gets different card styling.-->
-    <!--Maps through all product entries and displays them with either CardSmall or CardWide based on their position.-->
+
     <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
       {
         product.map((product, index) => {
@@ -117,19 +100,19 @@ const pageTitle: string = `Products | ${SITE.title}`;
       }
     </section>
   </div>
-  <!--Features statistics section-->
+
   <FeaturesStatsAlt
-    title="Why Choose ScrewFast?"
-    subTitle="Transform your ideas into tangible results with ScrewFast tools. Whether you're starting with a sketch on a napkin or diving into a comprehensive construction project, our tools are engineered to help you build with confidence."
+    title="Why Choose Our PET Preforms?"
+    subTitle="Our PET preforms are engineered for excellence, ensuring superior strength, transparency, and recyclability. Whether you need packaging solutions for beverages, food, or pharmaceuticals, we have the right product for you."
     benefits={[
-      "Robust and reliable tools for long-lasting performance.",
-      "Innovative solutions tailored to modern construction needs.",
-      "Customer support dedicated to your project's success.",
+      "High-quality PET preforms for various industries.",
+      "Advanced manufacturing ensuring precision and durability.",
+      "Eco-friendly and sustainable packaging solutions."
     ]}
   />
-  <!--Testimonials section-->
+
   <TestimonialsSectionAlt
-    title="What Our Customers Say"
+    title="What Our Clients Say"
     testimonials={testimonials}
   />
 </MainLayout>
