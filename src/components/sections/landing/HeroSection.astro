@@ -111,7 +111,6 @@ interface HeroSectionProps {
   secondaryBtn?: string;
   secondaryBtnURL?: string;
   images: Array<{ src: ImageMetadata; alt: string }>;
-  
 }
 
 const { title, subTitle, primaryBtn, primaryBtnURL, secondaryBtn, secondaryBtnURL, images } = Astro.props as HeroSectionProps;
@@ -119,32 +118,33 @@ const { title, subTitle, primaryBtn, primaryBtnURL, secondaryBtn, secondaryBtnUR
 if (!images || images.length === 0) {
   throw new Error('At least one image is required for the carousel');
 }
----
 
-<section class="hero-section">
-  <h1>{title}</h1>
-  {subTitle && <p>{subTitle}</p>}
+return (
+  <section class="hero-section">
+    <h1>{title}</h1>
+    {subTitle && <p>{subTitle}</p>}
 
-  {primaryBtn && (
-    <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
-  )}
-  {secondaryBtn && (
-    <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
-  )}
+    {primaryBtn && (
+      <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
+    )}
+    {secondaryBtn && (
+      <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
+    )}
 
-  <div class="carousel">
-    {images.map((image, index) => (
-  <Image
-    key={index} // Add the key attribute
-    src={image.src}
-    alt={image.alt}
-    class="carousel-image"
-    loading="lazy"
-    draggable={false}
-  />
-))}
-  </div>
-</section>
+    <div class="carousel">
+      {images.map((image) => (
+        <Image
+          key={image.src} // Ensure the key is unique (e.g., using the image src or a unique ID)
+          src={image.src}
+          alt={image.alt}
+          class="carousel-image"
+          loading="lazy"
+          draggable={false}
+        />
+      ))}
+    </div>
+  </section>
+);
 
 ---
 // comment
