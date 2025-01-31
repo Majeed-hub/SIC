@@ -98,9 +98,9 @@
 ---
 // Import the necessary dependencies
 import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
-import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
 
 // Define TypeScript interface for props
 interface Props {
@@ -110,29 +110,14 @@ interface Props {
   primaryBtnURL?: string;
   secondaryBtn?: string;
   secondaryBtnURL?: string;
-  withReview?: boolean;
-  avatars?: Array<string>;
-  starCount?: number;
-  rating?: string;
-  reviews?: string;
-  images: Array<{ src: any; alt: string }>;  // Array of images for carousel
+  images: Array<{
+    src: ImageMetadata;
+    alt: string;
+  }>;
 }
 
-// Get all props
-const {
-  title,
-  subTitle,
-  primaryBtn,
-  primaryBtnURL,
-  secondaryBtn,
-  secondaryBtnURL,
-  withReview,
-  avatars,
-  starCount,
-  rating,
-  reviews,
-  images
-} = Astro.props;
+// Get all props with proper typing
+const props = Astro.props;
 ---
 
 <section
@@ -143,40 +128,31 @@ const {
     <h1
       class="block text-balance text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-4xl lg:text-6xl lg:leading-tight"
     >
-      <Fragment set:html={title} />
+      <Fragment set:html={props.title} />
     </h1>
     
-    {subTitle &&
+    {props.subTitle && (
       <p
         class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5"
       >
-        {subTitle}
+        {props.subTitle}
       </p>
-    }
+    )}
 
     <div class="mt-7 grid w-full gap-3 sm:inline-flex">
-      {primaryBtn && 
-        <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
-      }
-      {secondaryBtn && 
-        <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
-      }
+      {props.primaryBtn && (
+        <PrimaryCTA title={props.primaryBtn} url={props.primaryBtnURL} />
+      )}
+      {props.secondaryBtn && (
+        <SecondaryCTA title={props.secondaryBtn} url={props.secondaryBtnURL} />
+      )}
     </div>
-
-    {withReview && 
-      <ReviewComponent 
-        avatars={avatars} 
-        starCount={starCount} 
-        rating={rating} 
-        reviews={reviews} 
-      />
-    }
   </div>
 
   <!-- Right column with image carousel -->
   <div class="relative flex w-full overflow-hidden rounded-lg">
     <div class="carousel relative h-[400px] w-full">
-      {images.map((image, index) => (
+      {props.images.map((image, index: number) => (
         <div 
           class="carousel-slide absolute h-full w-full opacity-0 transition-all duration-500"
           data-index={index}
@@ -214,7 +190,7 @@ const {
 
     <!-- Slide indicators -->
     <div class="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-      {images.map((_, index) => (
+      {props.images.map((_, index: number) => (
         <button
           class="carousel-indicator h-2 w-2 rounded-full bg-white/50 transition-all hover:bg-white/80"
           data-index={index}
@@ -225,8 +201,9 @@ const {
   </div>
 </section>
 
-<!-- Carousel functionality -->
 <script>
+  let intervalId: ReturnType<typeof setInterval>;
+
   function setupCarousel() {
     const carousel = document.querySelector('.carousel');
     const slides = document.querySelectorAll('.carousel-slide');
@@ -235,7 +212,6 @@ const {
     const nextButton = document.querySelector('.next-slide');
     
     let currentIndex = 0;
-    let intervalId: number | undefined;
 
     function showSlide(index: number) {
       slides.forEach((slide) => {
@@ -268,9 +244,7 @@ const {
     }
 
     function stopAutoplay() {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
+      clearInterval(intervalId);
     }
 
     // Event listeners
