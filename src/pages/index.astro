@@ -16,6 +16,12 @@ import tools from "@images/automated-tools.avif";
 import dashboard from "@images/dashboard-image.avif";
 import { partnersData } from "@/data_files/constants";
 
+const images = [
+{ src: heroImage, alt: "First hero image" },
+  { src: heroImage, alt: "Second hero image" },
+  { src: heroImage, alt: "Third hero image" }
+]
+
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
   "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
@@ -34,6 +40,7 @@ const avatarSrcs: Array<string> = [
     primaryBtnURL="/products"
     secondaryBtn="Contact us"
     secondaryBtnURL="/contact"
+    images={images}
     src={heroImage}
     alt="Stack of Water Preform product"
   />
