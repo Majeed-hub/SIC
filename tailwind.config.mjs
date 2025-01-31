@@ -25,6 +25,7 @@ export default {
         800: "#3a0000",  // Darker Maroon
         900: "#290000",  // Darkest Maroon
       },
+      yellow:colors.yellow,
       gold: {
         500: "#F5C700", // Gold accent
       },
