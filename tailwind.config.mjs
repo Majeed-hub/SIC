@@ -21,7 +21,8 @@ export default {
         400: "#a14d4d",  // Medium Maroon
         500: "#800000",  // Main Maroon (Qatar Flag)
         600: "#6b0000",  // Deep Maroon
-        700: "#630f41",  // Dark Maroon
+       // 700: "#630f41",  // Dark Maroon
+       700:"#8d1b3d",
         800: "#3a0000",  // Darker Maroon
         900: "#290000",  // Darkest Maroon
       },
