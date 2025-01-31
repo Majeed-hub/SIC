@@ -97,6 +97,7 @@
 //comment
 ---
 // Import required components and types---
+---
 // Import required components and types
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
@@ -114,7 +115,7 @@ interface HeroSectionProps {
   images: Array<{ src: ImageMetadata; alt: string }>;
 }
 
-const { title, subTitle, primaryBtn, primaryBtnURL, secondaryBtn, secondaryBtnURL, images } = Astro.props;
+const { title, subTitle, primaryBtn, primaryBtnURL, secondaryBtn, secondaryBtnURL, images } = Astro.props as HeroSectionProps;
 
 if (!images || images.length === 0) {
   throw new Error('At least one image is required for the carousel');
@@ -148,23 +149,23 @@ if (!images || images.length === 0) {
 </section>
 
 <script>
-  let currentIndex = 0;
-  let intervalId;
-  let isTransitioning = false;
+  let currentIndex: number = 0;
+  let intervalId: number | undefined;
+  let isTransitioning: boolean = false;
 
   function setupCarousel() {
-    const carousel = document.querySelector('.carousel');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const indicators = document.querySelectorAll('.carousel-indicator');
-    const prevButton = document.querySelector('.prev-slide');
-    const nextButton = document.querySelector('.next-slide');
+    const carousel = document.querySelector('.carousel') as HTMLElement | null;
+    const slides = document.querySelectorAll('.carousel-slide') as NodeListOf<HTMLElement>;
+    const indicators = document.querySelectorAll('.carousel-indicator') as NodeListOf<HTMLElement>;
+    const prevButton = document.querySelector('.prev-slide') as HTMLElement | null;
+    const nextButton = document.querySelector('.next-slide') as HTMLElement | null;
 
     if (!carousel || slides.length === 0 || indicators.length === 0 || !prevButton || !nextButton) {
       console.error('Carousel elements not found');
       return;
     }
 
-    const showSlide = (index) => {
+    const showSlide = (index: number) => {
       if (isTransitioning) return;
       isTransitioning = true;
 
@@ -188,23 +189,23 @@ if (!images || images.length === 0) {
       }, 500);
     };
 
-    const nextSlide = () => {
+    const nextSlide = (): void => {
       showSlide((currentIndex + 1) % slides.length);
     };
 
-    const prevSlide = () => {
+    const prevSlide = (): void => {
       showSlide((currentIndex - 1 + slides.length) % slides.length);
     };
 
-    let touchStartX = 0;
-    let touchStartY = 0;
+    let touchStartX: number = 0;
+    let touchStartY: number = 0;
 
-    carousel.addEventListener('touchstart', (e) => {
+    carousel.addEventListener('touchstart', (e: TouchEvent) => {
       touchStartX = e.touches[0].clientX;
       touchStartY = e.touches[0].clientY;
     });
 
-    carousel.addEventListener('touchend', (e) => {
+    carousel.addEventListener('touchend', (e: TouchEvent) => {
       const touchEndX = e.changedTouches[0].clientX;
       const touchEndY = e.changedTouches[0].clientY;
       const deltaX = touchStartX - touchEndX;
@@ -216,12 +217,12 @@ if (!images || images.length === 0) {
       }
     });
 
-    const startAutoplay = () => {
+    const startAutoplay = (): void => {
       stopAutoplay();
-      intervalId = setInterval(nextSlide, 5000);
+      intervalId = setInterval(nextSlide, 5000) as unknown as number;
     };
 
-    const stopAutoplay = () => {
+    const stopAutoplay = (): void => {
       if (intervalId) {
         clearInterval(intervalId);
         intervalId = undefined;
