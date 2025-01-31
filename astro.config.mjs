@@ -83,7 +83,7 @@ export default defineConfig({
       },
     ],
     social: {
-      github: "https://github.com/mearashadowfax/ScrewFast",
+      github: "https://github.com/majeed-hub/sic",
     },
     disable404Route: true,
     customCss: ["./src/assets/styles/starlight.css"],
