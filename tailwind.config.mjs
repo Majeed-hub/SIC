@@ -28,7 +28,8 @@ export default {
       gold: {
         500: "#F5C700", // Gold accent
       },
-      neutral: colors.neutral, // Neutral text color
+      neutral: colors.neutral, //neutral color
+      zinc: colors.zinc,
     },
     extend: {},
   },
