@@ -7,9 +7,8 @@ import type { CollectionEntry } from "astro:content";
 const {
   insightEntry,
   insightLocale,
-  label = Astro.currentLocale === "fr" ? "Lire plus" : "Read more",
+  label = Astro.currentLocale === "fr" ? "اقرأ المزيد" : "Read more",
 } = Astro.props;
-
 interface Props {
   insightEntry: CollectionEntry<"insights">;
   insightLocale?: string;

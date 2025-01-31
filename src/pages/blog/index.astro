@@ -9,7 +9,6 @@ import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
 
 // Get all blogs post in English and sort them based on publish date
-
 const englishBlogEntries = await getCollection("blog", ({ id }) => {
   return id.startsWith("en/");
 });
@@ -22,6 +21,7 @@ const blogPosts: CollectionEntry<"blog">[] = englishBlogEntries.sort(
   (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
     b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
 // Get all insights posts
 const insightPosts: CollectionEntry<"insights">[] = englishInsightsEntries;
 
@@ -30,12 +30,12 @@ const mostRecentPost: CollectionEntry<"blog"> = blogPosts[0];
 const otherPosts: CollectionEntry<"blog">[] = blogPosts.slice(1);
 
 // Define variables for page content
-const title: string = "Your Gateway to Construction Excellence";
+const title: string = "Your Gateway to PET Preform Excellence";
 const subTitle: string =
-  "Explore the latest news, tips, and insights from ScrewFast to enhance your construction projects. From product spotlights to project management strategies, our blog is your go-to resource for all things hardware and construction.";
+  "Explore the latest news, tips, and insights from Qatar International Plastic Factory. From product innovations to industry trends, our blog is your go-to resource for all things PET preforms and packaging solutions.";
 const secondTitle: string = "Insights";
 const secondSubTitle: string =
-  "Stay up-to-date with the latest trends and developments in the construction industry with insights from ScrewFast's team of industry experts. ";
+  "Stay up-to-date with the latest trends and developments in the PET preform and packaging industry with insights from our team of experts.";
 
 const pageTitle: string = `Blog | ${SITE.title}`;
 ---
@@ -45,17 +45,17 @@ const pageTitle: string = `Blog | ${SITE.title}`;
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/blog",
-    url: "https://screwfast.uk/blog",
-    name: "Blog | ScrewFast",
+    "@id": "https://sic-q.com/blog",
+    url: "https://sic-q.com/blog",
+    name: "Blog | Qatar International Plastic Factory",
     description:
-      "Stay up-to-date with the latest trends and developments in the construction industry with insights from ScrewFast's team of industry experts.",
+      "Stay up-to-date with the latest trends and developments in the PET preform and packaging industry with insights from our team of experts.",
     isPartOf: {
       "@type": "WebSite",
-      url: "https://screwfast.uk",
-      name: "ScrewFast",
+      url: "https://sic-q.com",
+      name: "Qatar International Plastic Factory",
       description:
-        "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
+        "Qatar International Plastic Factory specializes in manufacturing high-quality PET preforms for water, juice, and dairy products.",
     },
     inLanguage: "en-US",
   }}
@@ -87,12 +87,14 @@ const pageTitle: string = `Blog | ${SITE.title}`;
       {otherPosts.map((blogEntry) => <CardBlog blogEntry={blogEntry} />)}
     </div>
   </section>
+
   <!--Most recent blog post-->
   <section
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
     <CardBlogRecent blogEntry={mostRecentPost} />
   </section>
+
   <!--Insights section-->
   <section
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
