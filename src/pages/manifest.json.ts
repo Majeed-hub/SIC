@@ -44,13 +44,13 @@ export const GET: APIRoute = async () => {
   );
 
   const manifest = {
-    short_name: "ScrewFast",
-    name: "ScrewFast",
+    short_name: "SIC Qatar",
+    name: "SIC Qatar",
     icons,
     display: "minimal-ui",
     id: "/",
     start_url: "/",
-    theme_color: "#FFEDD5",
+    theme_color: "#8d1b3d",
     background_color: "#262626",
   };
 
