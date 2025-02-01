@@ -1,11 +1,11 @@
 ---
-Import the necessary dependencies
+// Import the necessary dependencies
 import { Image } from "astro:assets";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
 import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
 
- Define props from Astro
+//  Define props from Astro
 const {
   title,
   subTitle,
@@ -22,7 +22,7 @@ const {
   alt
 } = Astro.props;
 
- Define TypeScript interface for props
+//  Define TypeScript interface for props
 interface Props {
   title: string;
   subTitle?: string;
