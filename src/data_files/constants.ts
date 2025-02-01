@@ -35,9 +35,9 @@ export const OG = {
   locale: "en_US",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
-  image: ogImageSrc,
+  title: `${SITE.title}: Pet Repform Manufacturer`,
+  description: "SIC-QATAR specializes in high-quality Pet Repform products, providing reliable and innovative solutions for the pet industry. Trusted by professionals, SIC-QATAR combines top-notch manufacturing with cutting-edge design. Explore our pet products today and see why we're the industry leader!",
+  image: ogImageSrc,  
 };
 
 export const partnersData = [
