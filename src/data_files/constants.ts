@@ -1,4 +1,4 @@
-import ogImageSrc from "@images/social.png";
+import ogImageSrc from "@images/sic_logo.png";
 import sidra_water from "@images/sidra_water.svg";
 
 
