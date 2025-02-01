@@ -1,13 +1,14 @@
 ---
 import { getImage } from "astro:assets";
 import { OG, SEO, SITE } from "@data/constants";
-import faviconSvgSrc from "@images/favicon.svg";
+import faviconSvgSrc from "@images/icon.svg";
 import faviconSrc from "@images/favicon.png";
 
 // Default properties for the Meta component. These values are used if props are not provided.
 // 'meta' sets a default description meta tag to describe the page content.
 // 'structuredData' defines default structured data in JSON-LD format to enhance search engine understanding of the page (for SEO purposes).
 const defaultProps = {
+  
   meta: SITE.description,
   structuredData: SEO.structuredData,
 };
