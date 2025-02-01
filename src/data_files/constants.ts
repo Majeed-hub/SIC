@@ -8,7 +8,7 @@ export const SITE = {
   description: "SIC-QATAR is a leading PET preform manufacturer, delivering high-quality, reliable plastic solutions for diverse industries.",
   description_short: " SIC-QATAR offers high-quality PET preforms for various manufacturing needs.",
   url: "https://sicqatar.netlify.app/",
-  author: "Emil Gulamov",
+  author: "",
 };
 
 export const SEO = {
