@@ -1,7 +1,7 @@
 ---
 title: "The Impact of Sustainable Practices"
 description: "Discover how QIPF is leading the charge in promoting sustainability in the plastic manufacturing industry."
-cardImage: "@/images/insights/insight-3.avif"
+cardImage: "@/images/insights/insight-2.avif"
 cardImageAlt: "Top view of the arrangement of mechanical tools"
 ---
 

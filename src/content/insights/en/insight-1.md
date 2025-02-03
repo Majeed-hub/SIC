@@ -1,7 +1,7 @@
 ---
 title: "The Future of PET Manufacturing"
 description: "Explore QIPF's pioneering role in revolutionizing the plastic manufacturing industry through advanced technology and innovative solutions."
-cardImage: "@/images/insights/insight-1.avif"
+cardImage: "@/images/insights/insight-3.avif"
 cardImageAlt: "Top view mechanical tools arrangement"
 ---
 
