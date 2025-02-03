@@ -1,7 +1,7 @@
 ---
 title: "The Importance of Collaboration"
 description: "Explore how collaboration is central to QIPF's approach, driving effective communication and teamwork to achieve outstanding outcomes."
-cardImage: "@/images/insights/insight-2.avif"
+cardImage: "@/images/insights/insight-1.avif"
 cardImageAlt: "Top view mechanical tools arrangement"
 ---
 
