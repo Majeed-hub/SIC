@@ -22,9 +22,9 @@ const footerLinks = [
   {
     section: "",
     links: [
-      { name: "Testimonials", url: "#" },
-      { name: "Our Clients", url: "#" },
-      { name: "Faq", url: "#" },
+      { name: "Testimonials", url: "/products/#testimonials" },
+      { name: "Our Clients", url: "/"},
+      { name: "Faq", url: "/#faqs" },
 
      
     ],
