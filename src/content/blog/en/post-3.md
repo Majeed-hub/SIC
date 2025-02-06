@@ -6,7 +6,7 @@ role: "Strategic Manager"
 authorImage: "@/images/blog/anna.avif"
 authorImageAlt: "Avatar Description"
 pubDate: 2025-02-18
-cardImage: "@/images/blog/post-3.avif"
+cardImage: "@/images/blog/p2.jpg"
 cardImageAlt: "PET preform production line"
 readTime: 3
 tags: ["procurement", "cost-effective", "manufacturing efficiency"]

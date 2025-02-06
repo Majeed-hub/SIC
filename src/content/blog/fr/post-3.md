@@ -6,7 +6,7 @@ role: "Directrice Marketing Stratégique"
 authorImage: "@/images/blog/anna.avif"
 authorImageAlt: "Avatar Description"
 pubDate: 2025-02-18
-cardImage: "@/images/blog/post-3.avif"
+cardImage: "@/images/blog/p2.jpg"
 cardImageAlt: "Side view worker wearing gloves"
 readTime: 3
 tags: ["المشتريات", "فعالية التكلفة", "كفاءة التصنيع"]

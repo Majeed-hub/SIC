@@ -1,11 +1,11 @@
 ---
 title: "تعزيز الجودة والكفاءة مع مصنع قطر العالمي للصناعات البلاستيكية"
 description: "قوالب البولي إيثيلين تيرفثالات عالية الجودة لنتائج تصنيع فائقة"
-author: "براد"
+author: "النوري"
 authorImage: "@/images/blog/brad.avif"
 authorImageAlt: "وصف الصورة"
 pubDate: 2024-02-10
-cardImage: "@/images/blog/post-2.avif"
+cardImage: "@/images/blog/p1.jpg"
 cardImageAlt: "خط إنتاج قوالب البولي إيثيلين تيرفثالات"
 readTime: 5
 tags: ["جودة", "كفاءة", "ابتكار"]
