@@ -1,13 +1,13 @@
 ---
-title: "SF-TB T845"
-description: "Machine Screws"
+title: "SF-1 PET Preforms"
+description: "PET preforms"
 main:
   id: 1
   content: |
-    Introducing the SF-TB T845 – your go-to solution for precision fastening in machinery and equipment. This comprehensive set of machine screws is meticulously crafted to meet the stringent demands of industrial applications, ensuring secure and reliable fastening.
+    Introducing the SF-1 PET Preforms – your go-to solution for producing high-quality PET bottles. These preforms are engineered for precision, providing the strength and clarity needed in the beverage and packaging industries.
   imgCard: "@/images/product-image-1.avif"
   imgMain: "@/images/product-image-main-1.avif"
-  imgAlt: "Mockup boxes of machine screws set"
+  imgAlt: "Mockup boxes of PET preforms"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
@@ -19,37 +19,37 @@ tabs:
     dataTab: "#tabs-with-card-3"
     title: "Blueprints"
 longDescription:
-  title: "Precision Fastening Solutions"
+  title: "High-Quality PET Preforms for Bottling"
   subTitle: |
-    The SF-TB T845 Machine Screws offer unparalleled precision and reliability for industrial applications, ensuring seamless operation and longevity for your machinery and equipment.
+    The SF-1 PET Preforms are designed to produce strong, clear, and reliable PET bottles. Whether you're manufacturing containers for beverages or other products, these preforms deliver outstanding performance.
   btnTitle: "Contact sales to learn more"
   btnURL: "#"
 descriptionList:
-  - title: "Durability"
-    subTitle: "Crafted from high-quality materials, these machine screws are built to withstand the rigors of industrial environments."
-  - title: "Precision Engineering"
-    subTitle: "Engineered with precision-cut threads and exact specifications, ensuring a tight and secure fit for every application."
+  - title: "Strength and Durability"
+    subTitle: "Made from premium-grade PET plastic, these preforms offer exceptional durability, perfect for high-volume bottling."
+  - title: "Precision Molding"
+    subTitle: "Engineered with precision to ensure consistent quality and uniformity, ensuring reliable production every time."
   - title: "Versatility"
-    subTitle: "Suitable for a wide range of machinery and equipment, providing versatile fastening solutions for various industrial needs."
+    subTitle: "Ideal for a wide range of industries, including food and beverage, pharmaceuticals, and cosmetics, providing versatile packaging solutions."
 specificationsLeft:
-  - title: "Material Composition"
-    subTitle: "Constructed from premium-grade steel or alloy for exceptional strength and durability."
-  - title: "Surface Finish"
-    subTitle: "Finished with a protective coating to enhance corrosion resistance and extend service life."
-  - title: "Quantity Per Set"
-    subTitle: "Each set contains a comprehensive assortment of machine screws to meet diverse industrial requirements."
-  - title: "Size Range"
-    subTitle: "Available in various sizes and lengths to accommodate different machinery and equipment specifications."
+  - title: "Material"
+    subTitle: "Manufactured from high-quality PET material, providing clarity, strength, and durability."
+  - title: "Weight"
+    subTitle: "Available in various weights to suit different bottle sizes and applications."
+  - title: "Quantity"
+    subTitle: "Each package contains a sufficient number of preforms to meet your production needs."
+  - title: "Sizes"
+    subTitle: "Available in different sizes to accommodate various bottle shapes and capacities."
 specificationsRight:
-  - title: "Thread Specifications"
-    subTitle: "Precision-engineered threads ensure optimal grip and reliability, even in high-vibration environments."
-  - title: "Load Capacity"
-    subTitle: "Designed to meet or exceed industry standards for load-bearing capacity, ensuring safe and reliable operation."
+  - title: "Finish"
+    subTitle: "Smooth surface finish, ensuring compatibility with blow molding processes for high-quality bottle production."
+  - title: "Transparency"
+    subTitle: "Crystal-clear PET preforms that allow for perfect visibility, ideal for showcasing your product."
   - title: "Certifications"
-    subTitle: "Compliant with relevant industry standards and certifications, guaranteeing quality and reliability."
+    subTitle: "Compliant with international packaging and food safety standards, ensuring top-tier quality and reliability."
   - title: "Applications"
-    subTitle: "Ideal for use in a wide range of industrial machinery, equipment, and assemblies that demand precise and secure fastening."
+    subTitle: "Perfect for use in the beverage, cosmetic, pharmaceutical, and other industries where high-quality PET bottles are required."
 blueprints:
   first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"   
+  second: "@/images/blueprint-2.avif"
 ---

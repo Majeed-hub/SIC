@@ -1,13 +1,13 @@
 ---
-title: "SF-AB A765"
-description: "Assorted Screw Set" 
+title: "SF-2 PET Preforms"
+description: "High-quality PET preforms for plastic bottle manufacturing."
 main:
   id: 2
   content: |
-    Introducing the SF-AB A765 Assorted Screw Set – the ultimate solution for your screw fastening needs. This comprehensive set includes a wide variety of screws meticulously curated to tackle various projects with ease and precision.
+    Introducing the SF-AB A765 PET Preforms – a premium solution for the plastic bottle industry. Designed for precision, clarity, and strength, these preforms ensure high-quality results for beverage, pharmaceutical, and packaging applications.
   imgCard: "@/images/product-image-2.avif"
   imgMain: "@/images/product-image-main-2.avif"
-  imgAlt: "Mockup boxes of assorted screw set"
+  imgAlt: "PET preforms in various colors and sizes."
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
@@ -19,36 +19,41 @@ tabs:
     dataTab: "#tabs-with-card-3"
     title: "Blueprints"
 longDescription:
-  title: "Versatile Screw Fastening Solutions"
+  title: "High-Quality PET Preforms for Bottling Solutions"
   subTitle: |
-    The SF-AB A765 Assorted Screw Set offers unmatched versatility and convenience, making it the perfect choice for DIY enthusiasts and professionals alike. With a comprehensive selection of screws, you'll always have the right fastener for the job.
+    The SF-AB A765 PET Preforms offer superior quality and consistency, making them an excellent choice for manufacturing plastic bottles across various industries. Engineered for durability, recyclability, and ease of processing, these preforms cater to a wide range of applications.
   btnTitle: "Contact sales to learn more"
   btnURL: "#"
 descriptionList:
-  - title: "Wide Variety"
-    subTitle: "Includes a diverse range of screw types and sizes to accommodate various applications and materials."
-  - title: "Ease of Use"
-    subTitle: "Each screw is designed for effortless installation, ensuring hassle-free fastening every time."
-  - title: "Convenience"
-    subTitle: "Eliminates the need for multiple trips to the hardware store, saving time and effort on your projects."
+  - title: "Premium PET Material"
+    subTitle: "Made from food-grade polyethylene terephthalate (PET) for safety and durability."
+  - title: "Various Neck Sizes"
+    subTitle: "Available in multiple neck finishes to suit different bottle designs."
+  - title: "High Clarity & Strength"
+    subTitle: "Offers excellent transparency and impact resistance."
+  - title: "Lightweight & Eco-Friendly"
+    subTitle: "Designed for efficient production and recyclability."
 specificationsLeft:
   - title: "Material"
-    subTitle: "Constructed from high-quality materials such as stainless steel, ensuring durability and corrosion resistance."
-  - title: "Assortment"
-    subTitle: "Contains a generous assortment of screws, including wood screws, machine screws, and sheet metal screws."
-  - title: "Quantity"
-    subTitle: "Each set includes a sufficient quantity of screws to handle a wide range of projects and tasks."
-  - title: "Sizes"
-    subTitle: "Available in various sizes to suit different project requirements, ensuring compatibility and versatility."
+    subTitle: "Polyethylene Terephthalate (PET)"
+  - title: "Neck Finish"
+    subTitle: "28mm / 30mm / Custom sizes"
+  - title: "Weight"
+    subTitle: "Varies based on design (e.g., 12g, 15g, 20g, etc.)"
+  - title: "Application"
+    subTitle: "Bottled water, carbonated drinks, juices, and more"
+  - title: "Colors Available"
+    subTitle: "Clear, Blue, Custom"
 tableData:
   - feature: ["Specification", "Value"]
     description:
-      - ["Length (mm)", "Various"]
-      - ["Weight (g)", "N/A"]
-      - ["Material", "Stainless Steel"]
-      - ["Finish", "Assorted"]
-      - ["Package Contents", "Various screws in a set"]
+      - ["Material", "PET (Polyethylene Terephthalate)"]
+      - ["Neck Size", "28mm / 30mm / Custom"]
+      - ["Weight", "12g, 15g, 20g, Custom"]
+      - ["Transparency", "High Clarity"]
+      - ["Application", "Beverage, Pharmaceutical, Packaging"]
 blueprints:
   first: "@/images/blueprint-1.avif"
   second: "@/images/blueprint-2.avif"
 ---
+

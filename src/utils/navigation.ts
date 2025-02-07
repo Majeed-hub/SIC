@@ -1,9 +1,9 @@
 // An array of links for navigation bar
 const navBarLinks = [
   { name: "Home", url: "/" },
+  { name: "About", url: "/about" },
   { name: "Products", url: "/products" },
   { name: "Blog", url: "/blog" },
-  { name: "About", url: "/about" },
   { name: "Contact", url: "/contact" },
 
 ];
@@ -12,8 +12,8 @@ const footerLinks = [
   {
     section: "Quick links",
     links: [
-      { name: "Products", url: "/products" },
       { name: "About Us", url: "/about" },
+      { name: "Products", url: "/products" },
       { name: "Contact us", url: "/contact" },
       { name: "Blog", url: "/blog" },
 
@@ -23,7 +23,7 @@ const footerLinks = [
     section: "",
     links: [
       { name: "Testimonials", url: "/products/#testimonials" },
-      { name: "Our Clients", url: "/"},
+      { name: "Our Clients", url: "/#clients"},
       { name: "Faq", url: "/#faqs" },
 
      

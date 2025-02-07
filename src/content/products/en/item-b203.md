@@ -1,13 +1,13 @@
 ---
-title: "SF-BN B203"
-description: "Tap Bolts and Nuts Set"
+title: "SF-3 PET Preforms"
+description: "PET preforms"
 main:
   id: 3
   content: |
-    Meet the SF-BN B203 – your reliable companion for professional-grade fastening. This comprehensive box set comes with a versatile selection of tap bolts and nuts, meticulously crafted to provide the strongest hold for your construction and assembly projects.
+    Meet the SF-3 PET Preforms – your reliable companion for high-quality PET bottle production. These preforms are designed to provide precision and durability, making them the ideal solution for beverage and packaging industries.
   imgCard: "@/images/product-image-3.avif"
   imgMain: "@/images/product-image-main-3.avif"
-  imgAlt: "Mockup boxes of a tap bolts and nuts set"
+  imgAlt: "Mockup boxes of PET preforms"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
@@ -19,37 +19,37 @@ tabs:
     dataTab: "#tabs-with-card-3"
     title: "Blueprints"
 longDescription:
-  title: "Strength Meets Precision"
+  title: "Precision and Durability in Every Preform"
   subTitle: |
-    The SF-BN B203 Tap Bolts and Nuts Set offers robust durability and precision for construction professionals, ensuring reliable performance in every application, from house framing to machinery assembly.
+    The SF-3 PET Preforms are engineered to meet the high standards of the beverage, cosmetic, and pharmaceutical industries, ensuring strong, clear bottles that hold up to high-quality production processes.
   btnTitle: "Contact sales to learn more"
   btnURL: "#"
 descriptionList:
-  - title: "Corrosion Resistance"
-    subTitle: "Zinc coating not only provides a polished look but also shields against corrosion, ensuring longevity."
-  - title: "Improved Safety"
-    subTitle: "A secure fitting translates to safer structures with reduced risk of component failure."
-  - title: "Convenience"
-    subTitle: "This all-in-one set means you have the right size on hand, cutting down on project delays and additional trips to the hardware store."
+  - title: "Strength and Durability"
+    subTitle: "Made from premium-grade PET plastic, these preforms are designed to withstand the high-pressure blow molding process and provide durable final products."
+  - title: "Precision Molding"
+    subTitle: "Engineered for consistency and uniformity, ensuring each preform meets exact specifications for a seamless production process."
+  - title: "Versatility"
+    subTitle: "Ideal for a wide variety of industries including food, beverage, and personal care, offering flexible packaging solutions."
 specificationsLeft:
-  - title: "Material Composition"
-    subTitle: "Manufactured from high-grade steel, delivering strength and reliability for demanding applications."
-  - title: "Surface Finish"
-    subTitle: "Protected with a zinc coating to offer enhanced corrosion resistance and longevity."
-  - title: "Quantity Per Set"
-    subTitle: "The set includes a balanced selection of 25 tap bolts and 25 matching nuts."
-  - title: "Size Assortment"
-    subTitle: "Features a comprehensive range of sizes to cater to various project requirements, ensuring compatibility and versatility."
+  - title: "Material"
+    subTitle: "Produced from high-quality PET material, known for its clarity, strength, and durability."
+  - title: "Weight"
+    subTitle: "Available in various weights, allowing flexibility to suit different bottle sizes and product types."
+  - title: "Quantity"
+    subTitle: "Each package contains a sufficient number of preforms to meet the needs of your production process."
+  - title: "Sizes"
+    subTitle: "Available in various sizes and shapes to meet diverse bottle design requirements."
 specificationsRight:
-  - title: "Thread Details"
-    subTitle: "Engineered with precision-cut threads for a secure fit and easy installation."
-  - title: "Mechanical Properties"
-    subTitle: "Each bolt and nut is designed to meet specific load rating or strength grades, suitable for structural applications."
-  - title: "Standards and Certifications"
-    subTitle: "Complies with relevant industry standards and certifications, ensuring consistent quality and safety."
-  - title: "Suitable Applications"
-    subTitle: "Ideal for a wide array of uses, from construction environments to mechanical assemblies that demand strong and secure joints."
+  - title: "Finish"
+    subTitle: "Smooth and clean surface finish that ensures compatibility with blow molding for optimal bottle quality."
+  - title: "Transparency"
+    subTitle: "Crystal-clear PET, allowing your product to be clearly visible through the bottle."
+  - title: "Certifications"
+    subTitle: "Compliant with international packaging and food safety standards, ensuring safe and reliable usage."
+  - title: "Applications"
+    subTitle: "Ideal for use in beverage, cosmetic, pharmaceutical, and other packaging sectors that require high-quality PET bottles."
 blueprints:
   first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"  
+  second: "@/images/blueprint-2.avif"
 ---

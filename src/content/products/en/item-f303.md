@@ -1,13 +1,13 @@
 ---
-title: "SF-FN F303"
-description: "Hex Bolts"
+title: "SF-4 PET Preforms"
+description: "PET preforms"
 main:
   id: 4
   content: |
-    Introducing the SF-FN F303 Hex Bolts – the perfect choice for heavy-duty fastening applications. Crafted with precision and durability in mind, these hex bolts provide the strength and reliability you need for your toughest projects.
+    Introducing the SF-4 PET Preforms – the perfect choice for producing high-quality PET bottles. Designed with precision and durability in mind, these preforms provide the strength and reliability needed for beverage and packaging industries.
   imgCard: "@/images/product-image-4.avif"
   imgMain: "@/images/product-image-main-4.avif"
-  imgAlt: "Mockup boxes of hex bolts"
+  imgAlt: "Mockup boxes of PET preforms"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
@@ -19,37 +19,37 @@ tabs:
     dataTab: "#tabs-with-card-3"
     title: "Blueprints"
 longDescription:
-  title: "Heavy-Duty Fastening Solutions"
+  title: "High-Quality PET Preforms for Packaging"
   subTitle: |
-    The SF-FN F303 Hex Bolts are designed to handle the toughest fastening challenges with ease. Whether you're working on construction projects or heavy machinery, these hex bolts deliver the strength and reliability you need.
+    The SF-4 PET Preforms are engineered to provide excellent performance for producing PET bottles. Whether you're manufacturing beverage containers or cosmetic packaging, these preforms offer outstanding strength and clarity.
   btnTitle: "Contact sales to learn more"
   btnURL: "#"
 descriptionList:
   - title: "Strength and Durability"
-    subTitle: "Constructed from high-quality materials, these hex bolts are built to withstand heavy loads and tough conditions."
-  - title: "Precision Engineering"
-    subTitle: "Engineered with precision-cut threads and exact specifications, ensuring a tight and secure fit every time."
+    subTitle: "Made from premium-grade PET material, these preforms are built to handle pressure and retain structural integrity during the blowing process."
+  - title: "Precision Molding"
+    subTitle: "Engineered with precise molding to ensure consistent quality and uniformity across each batch, providing reliable performance every time."
   - title: "Versatility"
-    subTitle: "Suitable for a wide range of applications, from construction to machinery, providing versatile fastening solutions."
+    subTitle: "Suitable for a variety of industries, including food and beverage, cosmetics, and pharmaceuticals, offering versatile packaging solutions."
 specificationsLeft:
   - title: "Material"
-    subTitle: "Made from premium-grade steel or alloy, offering exceptional strength and corrosion resistance."
-  - title: "Thread Design"
-    subTitle: "Precision-cut threads ensure optimal grip and reliability, even in high-stress environments."
+    subTitle: "Manufactured from high-quality PET plastic, ensuring clarity, strength, and durability."
+  - title: "Weight"
+    subTitle: "Available in different weights to suit various bottle sizes and applications."
   - title: "Quantity"
-    subTitle: "Each set includes a sufficient quantity of hex bolts to tackle various projects and applications."
+    subTitle: "Each package contains a sufficient number of preforms to meet your production needs."
   - title: "Sizes"
-    subTitle: "Available in a range of sizes to accommodate different project requirements, ensuring versatility and compatibility."
+    subTitle: "Available in various sizes, designed to accommodate different bottle shapes and capacities."
 specificationsRight:
   - title: "Finish"
-    subTitle: "Finished with a protective coating to enhance corrosion resistance and extend service life."
-  - title: "Load Capacity"
-    subTitle: "Designed to meet or exceed industry standards for load-bearing capacity, ensuring reliable performance under heavy loads."
+    subTitle: "Smooth surface finish to ensure the preform is suitable for easy blow molding and high-quality bottle production."
+  - title: "Transparency"
+    subTitle: "Crystal-clear transparency, perfect for showcasing your product, whether it’s beverages, cosmetics, or pharmaceuticals."
   - title: "Certifications"
-    subTitle: "Compliant with relevant industry standards and certifications, guaranteeing quality and reliability."
+    subTitle: "Compliant with global packaging and food safety standards, ensuring top-tier quality and reliability."
   - title: "Applications"
-    subTitle: "Ideal for use in construction, machinery, automotive, and other heavy-duty applications that demand strong and reliable fastening."
+    subTitle: "Ideal for use in the beverage, cosmetic, pharmaceutical, and other packaging industries where PET bottles are required."
 blueprints:
   first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"  
+  second: "@/images/blueprint-2.avif"
 ---

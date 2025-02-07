@@ -1,55 +1,55 @@
 ---
-title: "SF-FN F303"
-description: "Boulons hexagonaux"
+title: "SF-4 PET Preforms"
+description: "قوالب PET"
 main:
   id: 4
   content: |
-    Découvrez les boulons hexagonaux SF-FN F303 – le choix parfait pour les applications de fixation lourdes. Conçus avec précision et durabilité, ces boulons hexagonaux offrent la force et la fiabilité dont vous avez besoin pour vos projets les plus exigeants.
+    نقدم لكم قوالب PET SF-4 – الخيار المثالي لإنتاج زجاجات PET عالية الجودة. تم تصميمها بدقة واهتمام بالمتانة، مما يوفر القوة والموثوقية اللازمة لصناعات المشروبات والتعبئة.
   imgCard: "@/images/product-image-4.avif"
   imgMain: "@/images/product-image-main-4.avif"
-  imgAlt: "Maquettes de boîtes de boulons hexagonaux"
+  imgAlt: "نماذج تجريبية لقوالب PET"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
-    title: "Description"
+    title: "الوصف"
   - id: "tabs-with-card-item-2"
     dataTab: "#tabs-with-card-2"
-    title: "Spécifications"
+    title: "المواصفات"
   - id: "tabs-with-card-item-3"
     dataTab: "#tabs-with-card-3"
-    title: "Plans"
+    title: "الرسومات الهندسية"
 longDescription:
-  title: "Solutions de fixation robustes"
+  title: "قوالب PET عالية الجودة للتعبئة"
   subTitle: |
-    Les boulons hexagonaux SF-FN F303 sont conçus pour relever les défis de fixation les plus difficiles avec aisance. Que vous travailliez sur des projets de construction ou des machines lourdes, ces boulons hexagonaux offrent la force et la fiabilité nécessaires.
-  btnTitle: "Contactez le service commercial pour en savoir plus"
+    تم تصميم قوالب PET SF-4 لتوفير أداء ممتاز في إنتاج زجاجات PET. سواء كنت تقوم بإنتاج عبوات المشروبات أو تعبئة مستحضرات التجميل، فإن هذه القوالب تقدم قوة وشفافية استثنائية.
+  btnTitle: "اتصل بالمبيعات لمعرفة المزيد"
   btnURL: "#"
 descriptionList:
-  - title: "Solidité et durabilité"
-    subTitle: "Fabriqués à partir de matériaux de haute qualité, ces boulons hexagonaux sont conçus pour supporter des charges lourdes et des conditions difficiles."
-  - title: "Ingénierie de précision"
-    subTitle: "Conçus avec des filets coupés avec précision et des spécifications exactes, garantissant un ajustement serré et sécurisé à chaque fois."
-  - title: "Polyvalence"
-    subTitle: "Adaptés à une large gamme d'applications, de la construction aux machines, offrant des solutions de fixation polyvalentes."
+  - title: "القوة والمتانة"
+    subTitle: "مصنوعة من مادة PET عالية الجودة، هذه القوالب مصممة لتحمل الضغط والحفاظ على التكامل الهيكلي أثناء عملية التشكيل بالنفخ."
+  - title: "التشكيل الدقيق"
+    subTitle: "تم تصميمها بتقنية تشكيل دقيقة لضمان الجودة المتسقة والتوحيد عبر كل دفعة، مما يضمن أداء موثوق في كل مرة."
+  - title: "التنوع"
+    subTitle: "مناسبة لعدد من الصناعات، بما في ذلك الأغذية والمشروبات، ومستحضرات التجميل، والصيدلة، مما يوفر حلول تعبئة متعددة الاستخدامات."
 specificationsLeft:
-  - title: "Matériau"
-    subTitle: "Fabriqués en acier ou en alliage de qualité supérieure, offrant une résistance exceptionnelle et une résistance à la corrosion."
-  - title: "Conception du filetage"
-    subTitle: "Des filets coupés avec précision assurent une adhérence optimale et une fiabilité même dans des environnements à haute contrainte."
-  - title: "Quantité"
-    subTitle: "Chaque ensemble comprend une quantité suffisante de boulons hexagonaux pour divers projets et applications."
-  - title: "Tailles"
-    subTitle: "Disponible dans une gamme de tailles pour répondre aux différentes exigences des projets, garantissant polyvalence et compatibilité."
+  - title: "المادة"
+    subTitle: "مصنوعة من بلاستيك PET عالي الجودة، مما يضمن الشفافية والقوة والمتانة."
+  - title: "الوزن"
+    subTitle: "متوفرة بأوزان مختلفة لتناسب أحجام الزجاجات المختلفة والتطبيقات المتنوعة."
+  - title: "الكمية"
+    subTitle: "كل حزمة تحتوي على عدد كافٍ من القوالب لتلبية احتياجاتك الإنتاجية."
+  - title: "الأحجام"
+    subTitle: "متوفرة بأحجام مختلفة، مصممة لاستيعاب أشكال وأحجام الزجاجات المختلفة."
 specificationsRight:
-  - title: "Finition"
-    subTitle: "Fini avec un revêtement protecteur pour améliorer la résistance à la corrosion et prolonger la durée de vie."
-  - title: "Capacité de charge"
-    subTitle: "Conçus pour répondre ou dépasser les normes industrielles en matière de capacité de charge, garantissant des performances fiables sous des charges lourdes."
-  - title: "Certifications"
-    subTitle: "Conformes aux normes et certifications industrielles pertinentes, garantissant qualité et fiabilité."
-  - title: "Applications"
-    subTitle: "Idéal pour une utilisation dans la construction, les machines, l'automobile et d'autres applications lourdes nécessitant une fixation solide et fiable."
+  - title: "اللمسة النهائية"
+    subTitle: "سطح ناعم لضمان أن القالب مناسب لتشكيل النفخ السهل وإنتاج زجاجات عالية الجودة."
+  - title: "الشفافية"
+    subTitle: "شفافية كريستالية، مثالية لعرض منتجك، سواء كان مشروبات أو مستحضرات تجميل أو أدوية."
+  - title: "الشهادات"
+    subTitle: "مطابقة للمعايير العالمية لتعبئة وتغليف الطعام، مما يضمن الجودة العالية والموثوقية."
+  - title: "التطبيقات"
+    subTitle: "مثالية للاستخدام في صناعات المشروبات، مستحضرات التجميل، الصيدلة، وصناعات التعبئة الأخرى التي تتطلب زجاجات PET."
 blueprints:
   first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"    
+  second: "@/images/blueprint-2.avif"
 ---
