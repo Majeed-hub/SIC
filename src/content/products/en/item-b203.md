@@ -23,7 +23,7 @@ longDescription:
   subTitle: |
     The SF-3 PET Preforms are engineered to meet the high standards of the beverage, cosmetic, and pharmaceutical industries, ensuring strong, clear bottles that hold up to high-quality production processes.
   btnTitle: "Contact sales to learn more"
-  btnURL: "#"
+  btnURL: "/contact"
 descriptionList:
   - title: "Strength and Durability"
     subTitle: "Made from premium-grade PET plastic, these preforms are designed to withstand the high-pressure blow molding process and provide durable final products."

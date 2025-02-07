@@ -23,7 +23,7 @@ longDescription:
   subTitle: |
     The SF-AB A765 PET Preforms offer superior quality and consistency, making them an excellent choice for manufacturing plastic bottles across various industries. Engineered for durability, recyclability, and ease of processing, these preforms cater to a wide range of applications.
   btnTitle: "Contact sales to learn more"
-  btnURL: "#"
+  btnURL: "/contact"
 descriptionList:
   - title: "Premium PET Material"
     subTitle: "Made from food-grade polyethylene terephthalate (PET) for safety and durability."

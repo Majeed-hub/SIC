@@ -23,7 +23,7 @@ longDescription:
   subTitle: |
     The SF-1 PET Preforms are designed to produce strong, clear, and reliable PET bottles. Whether you're manufacturing containers for beverages or other products, these preforms deliver outstanding performance.
   btnTitle: "Contact sales to learn more"
-  btnURL: "#"
+  btnURL: "/contact"
 descriptionList:
   - title: "Strength and Durability"
     subTitle: "Made from premium-grade PET plastic, these preforms offer exceptional durability, perfect for high-volume bottling."

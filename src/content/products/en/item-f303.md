@@ -23,7 +23,7 @@ longDescription:
   subTitle: |
     The SF-4 PET Preforms are engineered to provide excellent performance for producing PET bottles. Whether you're manufacturing beverage containers or cosmetic packaging, these preforms offer outstanding strength and clarity.
   btnTitle: "Contact sales to learn more"
-  btnURL: "#"
+  btnURL: "/contact"
 descriptionList:
   - title: "Strength and Durability"
     subTitle: "Made from premium-grade PET material, these preforms are built to handle pressure and retain structural integrity during the blowing process."
