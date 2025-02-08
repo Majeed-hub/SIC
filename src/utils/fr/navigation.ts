@@ -20,7 +20,7 @@ const footerLinks = [
   {
     section: "",
     links: [
-      { name: "آراء العملاء", url: "/fr/products/#testimonials" },
+      // { name: "آراء العملاء", url: "/fr/products/#testimonials" },
       { name: "عملاؤنا", url: "#" },
       { name: "الأسئلة الشائعة", url: "/fr/#faqs" },
     ],

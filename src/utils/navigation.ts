@@ -22,7 +22,7 @@ const footerLinks = [
   {
     section: "",
     links: [
-      { name: "Testimonials", url: "/products/#testimonials" },
+      // { name: "Testimonials", url: "/products/#testimonials" },
       { name: "Our Clients", url: "/#clients"},
       { name: "Faq", url: "/#faqs" },
 
