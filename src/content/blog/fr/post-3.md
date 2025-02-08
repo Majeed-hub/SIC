@@ -1,9 +1,9 @@
 ---
 title: "تبسيط المشتريات وتحسين التكاليف مع مصنع قطر الدولي للبلاستيك"
 description: "عبوات البولي إيثيلين تيريفثاليت عالية الجودة وفعالة من حيث التكلفة للتصنيع الفعّال."
-author: "Olga Zabegina"
-role: "Directrice Marketing Stratégique"
-authorImage: "@/images/blog/anna.avif"
+author: ""
+role: ""
+authorImage: "@/images/avatar.jpg"
 authorImageAlt: "Avatar Description"
 pubDate: 2025-02-18
 cardImage: "@/images/blog/p2.jpg"

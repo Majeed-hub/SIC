@@ -1,8 +1,8 @@
 ---
 title: "Enhancing Quality and Efficiency with Qatar International Plastic Factory"
 description: "High-quality PET preforms for superior manufacturing results"
-author: "Al-noori"
-authorImage: "@/images/blog/brad.avif"
+author: ""
+authorImage: "@/images/avatar.jpg"
 authorImageAlt: "Avatar Description"
 pubDate: 2024-02-10
 cardImage: "@/images/blog/p1.jpg"

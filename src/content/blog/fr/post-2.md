@@ -2,7 +2,7 @@
 title: "تعزيز الجودة والكفاءة مع مصنع قطر العالمي للصناعات البلاستيكية"
 description: "قوالب البولي إيثيلين تيرفثالات عالية الجودة لنتائج تصنيع فائقة"
 author: "النوري"
-authorImage: "@/images/blog/brad.avif"
+authorImage: "@/images/avatar.jpg"
 authorImageAlt: "وصف الصورة"
 pubDate: 2024-02-10
 cardImage: "@/images/blog/p1.jpg"

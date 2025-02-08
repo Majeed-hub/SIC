@@ -1,9 +1,9 @@
 ---
 title: "Streamline Procurement and Optimize Costs with Qatar International Plastic Factory"
 description: "High-quality, cost-effective PET preforms for efficient manufacturing."
-author: "Olga Zabegina"
-role: "Strategic Manager"
-authorImage: "@/images/blog/anna.avif"
+author: ""
+role: ""
+authorImage: "@/images/avatar.jpg"
 authorImageAlt: "Avatar Description"
 pubDate: 2025-02-18
 cardImage: "@/images/blog/p2.jpg"

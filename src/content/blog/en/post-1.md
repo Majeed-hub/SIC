@@ -1,8 +1,8 @@
 ---
 title: "Maximizing Efficiency with SIC-qipf's Cutting-Edge Solutions"
 description: "Innovating Manufacturing Efficiency with Precision Plastic Solutions & Support"
-author: "Jacob"
-authorImage: "@/images/blog/jacob.avif"
+author: ""
+authorImage: "@/images/avatar.jpg"
 authorImageAlt: "Avatar Description"
 pubDate: 2024-02-06
 cardImage: "@/images/blog/post-1.avif"

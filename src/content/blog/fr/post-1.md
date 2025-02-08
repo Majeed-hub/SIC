@@ -2,7 +2,7 @@
 title: "تعظيم الكفاءة مع حلول SIC-qipf المتطورة"
 description: "ابتكار كفاءة التصنيع بحلول البلاستيك الدقيقة والدعم"
 author: "جاكوب"
-authorImage: "@/images/blog/jacob.avif"
+authorImage: "@/images/avatar.jpg"
 authorImageAlt: "وصف الصورة الرمزية"
 pubDate: 2024-02-06
 cardImage: "@/images/blog/post-1.avif"
