@@ -1,6 +1,6 @@
 ---
 title: "SF-2 PET Preforms"
-description: "High-quality PET preforms for plastic bottle manufacturing."
+description: "PET preforms"
 main:
   id: 2
   content: |
