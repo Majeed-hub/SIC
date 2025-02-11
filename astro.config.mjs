@@ -9,7 +9,7 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://screwfast.uk",
+  site: "https://sicqatar.qa",
   image: {
     domains: ["images.unsplash.com"],
   },
@@ -26,7 +26,7 @@ export default defineConfig({
   prefetch: true,
   integrations: [tailwind(), sitemap({
     i18n: {
-      defaultLocale: "en", // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
+      defaultLocale: "en", // All urls that don't contain `fr` after `https://sicqatar.qa/` will be treated as default locale, i.e. `en`
       locales: {
         en: "en", // The `defaultLocale` value must present in `locales` keys
         fr: "fr",
@@ -99,14 +99,14 @@ export default defineConfig({
         tag: "meta",
         attrs: {
           property: "og:image",
-          content: "https://screwfast.uk" + "/social.webp",
+          content: "https://sicqatar.qa" + "/social.webp",
         },
       },
       {
         tag: "meta",
         attrs: {
           property: "twitter:image",
-          content: "https://screwfast.uk" + "/social.webp",
+          content: "https://sicqatar.qa" + "/social.webp",
         },
       },
     ],

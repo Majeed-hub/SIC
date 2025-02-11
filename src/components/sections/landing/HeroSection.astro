@@ -1,11 +1,10 @@
 ---
-// Import the necessary dependencies
 import { Image } from "astro:assets";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
 import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
 
-//  Define props from Astro
+// Define props from Astro
 const {
   title,
   subTitle,
@@ -18,11 +17,11 @@ const {
   starCount,
   rating,
   reviews,
-  src,
-  alt
+  srcList, // Updated: Array of images for carousel
+  altList
 } = Astro.props;
 
-//  Define TypeScript interface for props
+// Define TypeScript interface for props
 interface Props {
   title: string;
   subTitle?: string;
@@ -35,60 +34,79 @@ interface Props {
   starCount?: number;
   rating?: string;
   reviews?: string;
-  src?: any;
-  alt?: string;
+  srcList: Array<any>; // Updated: Accepts an array of images
+  altList: Array<string>;
 }
 ---
 
- <!-- Defining a grid container that holds all the content -->
- <section
-   class="mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full"
- >
-   <!-- Title and description -->
-   <div>
-     <!-- Each h1 and p tag renders a portion of the title and subTitle defined above -->
-     <h1
-       class="block text-balance text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-4xl lg:text-6xl lg:leading-tight"
-     >
-      <!-- About Fragment: https:docs.astro.build/en/basics/astro-syntax/#fragments -->
+<section
+  class="mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full"
+>
+  <!-- Title and description -->
+  <div>
+    <h1 class="block text-balance text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-4xl lg:text-6xl lg:leading-tight">
       <Fragment set:html={title} />
     </h1>
-     {subTitle &&
-    <p
-      class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5"
-    >
+    {subTitle &&
+    <p class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5">
       {subTitle}
     </p>
-  }
-     <!-- Action Button Section: This section includes two CTAs with their own styles and URL -->
+    }
+    
+    <!-- Action Button Section -->
     <div class="mt-7 grid w-full gap-3 sm:inline-flex">
-      {primaryBtn && 
-      <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
-      }
-      {secondaryBtn && 
-      <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
-      }
-    </div>
-
-     <!-- Review Section: This section presents avatars, review ratings and the number of reviews -->
-    <!-- { withReview ? (
-    <ReviewComponent avatars={avatars} starCount={starCount} rating={rating} reviews={reviews} />
-    ) : "" } -->
-
-  </div>
-   <!-- Hero Image Section -->
-  <div class="flex w-full">
-      <div class="top-12 overflow-hidden">
-	{src && alt &&
-	<Image
-        src={src}
-        alt={alt}
-        class="h-full w-full scale-110 object-cover object-center"
-        draggable={"false"}
-        loading={"eager"}
-        format={"avif"}
-	 />
-	}
+      {primaryBtn && <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />}
+      {secondaryBtn && <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />}
     </div>
   </div>
+
+  <!-- Hero Image Carousel -->
+  <div class="flex w-full relative overflow-hidden carousel-container">
+    {srcList.map((src, index) => {
+      return (
+        <div class="carousel-slide" data-key={index}>  <!-- Changed key to data-key -->
+          <Image 
+            src={src} 
+            alt={altList[index]} 
+            class="h-full w-full object-cover object-center" 
+            draggable={"false"} 
+            loading={"eager"} 
+            format={"avif"} 
+          />
+        </div>
+      );
+    })}
+</div>
+
 </section>
+
+<style>
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+
+  .carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fadeCarousel 20s infinite;
+  }
+
+  .carousel-slide:nth-child(1) { animation-delay: 0s; }
+  .carousel-slide:nth-child(2) { animation-delay: 3s; }
+  .carousel-slide:nth-child(3) { animation-delay: 6s; }
+  .carousel-slide:nth-child(4) { animation-delay: 9s; }
+  .carousel-slide:nth-child(5) { animation-delay: 12s; }
+  .carousel-slide:nth-child(6) { animation-delay: 15s; }
+
+  @keyframes fadeCarousel {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+</style>

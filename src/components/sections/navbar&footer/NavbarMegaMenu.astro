@@ -89,7 +89,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         <!-- Navigation links and Authentication component -->
         {
           strings.navBarLinks.map((link) => {
-            if (link.name === "Services") {
+            if (link.name === "About") {
               return <MegaMenuLink />;
             } else {
               return <NavLink url={link.url} name={link.name} />;

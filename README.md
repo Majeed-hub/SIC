@@ -4,7 +4,7 @@
 
 ScrewFast is an **open-source template** designed for quick and efficient web project setup, blending **minimalism with functionality**. Whether you're showcasing a portfolio, launching a company landing page, or running a blog, ScrewFast provides everything you need. By combining the power of the [Astro](https://astro.build/), [Tailwind CSS](https://tailwindcss.com/), and [Preline UI](https://preline.co/), this template offers a functional and aesthetically pleasing solution for your web presence.
 
-**[View Live Demo](https://screwfast.uk)**
+**[View Live Demo](https://sicqatar.qa)**
 
 ## Table of Contents
 

@@ -1,5 +1,4 @@
 ---
-// Import the necessary components
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
 import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
@@ -8,7 +7,12 @@ import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
-import heroImage from "@images/hero.png";
+import heroImage1 from "@images/hero.png";
+import heroImage2 from "@images/progress-building.avif";
+import heroImage3 from "@images/mission.jpg";
+import heroImage4 from "@images/construction-image.avif";
+import heroImage5 from "@images/progress-building.avif";
+import heroImage6 from "@images/product-image-3.avif";
 import faqs from "@data/faqs.json";
 import features from "@data/features.json";
 import construction from "@images/quality.jpg";
@@ -17,16 +21,19 @@ import dashboard from "@images/bottles.jpg";
 import { partnersData } from "@/data_files/constants";
 
 const images = [
-{ src: heroImage, alt: "First hero image" },
-  { src: heroImage, alt: "Second hero image" },
-  { src: heroImage, alt: "Third hero image" }
-]
+  { src: heroImage1, alt: "First hero image" },
+  { src: heroImage2, alt: "Second hero image" },
+  { src: heroImage3, alt: "Third hero image" },
+  { src: heroImage4, alt: "Fourth hero image" },
+  { src: heroImage5, alt: "Fifth hero image" },
+  { src: heroImage6, alt: "Sixth hero image" }
+];
 
 const avatarSrcs: Array<string> = [
-  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGV8fDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGV8fDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGV8fDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGV8fDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
 ];
 ---
 
@@ -40,68 +47,55 @@ const avatarSrcs: Array<string> = [
     primaryBtnURL="/products"
     secondaryBtn="Contact us"
     secondaryBtnURL="/contact"
-    src={heroImage}
-    alt="Stack of Water Preform product"
+    srcList={[heroImage1, heroImage2, heroImage3,heroImage4, heroImage5, heroImage6]}
+    altList={["Stack of Water Preform product", "Manufacturing process", "PET Bottles","heroImage4","heroImage5","heroImage6"]}
   />
-  <!-- <HeroSection
-  title={`Qatar's Leading PET Preform <span
-    class="text-maroon-700 dark:text-maroon-700">Manufacturer</span>`}
-  subTitle="Innovative Excellence in Plastic Solutions for Water, Juice & Dairy Packaging."
-  primaryBtn="Start Exploring"
-  primaryBtnURL="/products"
-  secondaryBtn="Contact us"
-  secondaryBtnURL="/contact"
-  images={images}
-/> -->
-
 
   <FeaturesGeneral
-  title="Excellence in PET Preform Manufacturing"
-  subTitle="At Qatar International Plastic Factory, we specialize in high-quality PET preforms for water, juice, and dairy packaging."
-  features={features} 
-/>
+    title="Excellence in PET Preform Manufacturing"
+    subTitle="At Qatar International Plastic Factory, we specialize in high-quality PET preforms for water, juice, and dairy packaging."
+    features={features} 
+  />
 
-
-<FeaturesNavs
-  title={`Customize <span class="text-maroon-700 dark:text-maroon-700">Qatar International Plastic Factory</span>'s offerings to suit your packaging needs.`}
-  tabs={[
-    {
-      heading: "State-of-the-Art PET Preforms",
-      content:
-        "We specialize in high-quality PET preforms for water, juice, and dairy products, manufactured using advanced Milacron machines.",
-      svg: "tools",
-      src: tools,
-      alt: "PET preforms on a production line",
-      first: true,
-    },
-    {
-      heading: "High-Quality PET Preforms",
-      content:
-        "Our PET Preforms are manufactured with precision to ensure durability, clarity, and superior performance for various beverage and packaging needs.",
-      svg: "dashboard",
-      src: dashboard,
-      alt: "High-Quality PET Preforms for diverse applications",
-      second: true,
-    },
-    {
-      heading: "Quality Assurance & Innovation",
-      content:
-        "Equipped with advanced instruments, we ensure top-quality standards while continuously innovating new mold products.",
-      svg: "house",
-      src: construction,
-      alt: "Quality assurance instruments in the factory",
-    },
-  ]}
-/>
+  <FeaturesNavs
+    title={`Customize <span class="text-maroon-700 dark:text-maroon-700">Qatar International Plastic Factory</span>'s offerings to suit your packaging needs.`}
+    tabs={[
+      {
+        heading: "State-of-the-Art PET Preforms",
+        content:
+          "We specialize in high-quality PET preforms for water, juice, and dairy products, manufactured using advanced Milacron machines.",
+        svg: "tools",
+        src: tools,
+        alt: "PET preforms on a production line",
+        first: true,
+      },
+      {
+        heading: "High-Quality PET Preforms",
+        content:
+          "Our PET Preforms are manufactured with precision to ensure durability, clarity, and superior performance for various beverage and packaging needs.",
+        svg: "dashboard",
+        src: dashboard,
+        alt: "High-Quality PET Preforms for diverse applications",
+        second: true,
+      },
+      {
+        heading: "Quality Assurance & Innovation",
+        content:
+          "Equipped with advanced instruments, we ensure top-quality standards while continuously innovating new mold products.",
+        svg: "house",
+        src: construction,
+        alt: "Quality assurance instruments in the factory",
+      },
+    ]}
+  />
 
   <TestimonialsSection
     title="Fast-Track Your Production"
     subTitle="At Qatar International Plastic Factory, we ensure a swift start with instant production setup. Experience the speed of manufacturing redefined."
-    ;
     testimonials={[
       {
         content:
-        "Qatar International Plastic Factory dramatically boosted our production efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in plastic manufacturing!",
+          "Qatar International Plastic Factory dramatically boosted our production efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in plastic manufacturing!",
       },
     ]}
     statistics={[
@@ -126,22 +120,22 @@ const avatarSrcs: Array<string> = [
       },
     ]}
   />
-  <section id="clients">
-  <ClientsSection
-  title="Trusted by Industry Leaders"
-  subTitle="Experience the reliability chosen by industry giants."
-  partners={partnersData}
-/>
-</section>
 
-  <!-- <PricingSection pricing={pricing} /> -->
+  <section id="clients">
+    <ClientsSection
+      title="Trusted by Industry Leaders"
+      subTitle="Experience the reliability chosen by industry giants."
+      partners={partnersData}
+    />
+  </section>
 
   <section id="faqs">
     <FAQ title="Frequently<br />asked questions" faqs={faqs} />
   </section>
-  
- <HeroSectionAlt
-  title="Let’s Innovate Together"
-  subTitle="Your trusted partner for high-quality PET preforms for water, juice, and dairy packaging."
+
+  <HeroSectionAlt
+    title="Let’s Innovate Together"
+    subTitle="Your trusted partner for high-quality PET preforms for water, juice, and dairy packaging."
   />
+
 </MainLayout>
