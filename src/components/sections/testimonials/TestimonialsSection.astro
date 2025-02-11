@@ -19,7 +19,8 @@ interface Props {
 // TypeScript type for testimonials
 type Testimonial = {
   content: string;
- 
+  author: string;
+  role: string;
 };
 
 // TypeScript type for stats.
@@ -54,7 +55,7 @@ type StatProps = {
       <!-- Generate a blockquote for each testimonial in the testimonials array by mapping over the array. -->
       { testimonials &&
         testimonials.map((testimonial) => (
-        <TestimonialItem content={testimonial.content}/>
+        <TestimonialItem content={testimonial.content} author={testimonial.author} role={testimonial.role} />
         ))
       }
     </div>
