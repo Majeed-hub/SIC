@@ -46,15 +46,8 @@ const avatarSrcs: Array<string> = [
   primaryBtnURL="/products"
   secondaryBtn="Contact us"
   secondaryBtnURL="/contact"
-  srcList={[heroImage1, heroImage2, heroImage3, heroImage4, heroImage5, heroImage6]} // ✅ Pass the full image object
-  altList={[
-    "Stack of Water Preform product",
-    "Manufacturing process",
-    "PET Bottles",
-    "Construction process of a factory",
-    "Building under progress",
-    "Under-construction site with equipment"
-  ]}
+  srcList={images}  // ✅ Pass images array directly
+  altList={images.map(image => image.alt)}  // ✅ Ensure alt text is correctly passed as an array
 />
 
   <FeaturesGeneral
