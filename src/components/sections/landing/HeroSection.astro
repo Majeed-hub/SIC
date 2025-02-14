@@ -62,21 +62,20 @@ interface Props {
 
   <!-- Hero Image Carousel -->
   <div class="flex w-full relative overflow-hidden carousel-container">
-    {srcList.map((image, index) => {  // ✅ Use full image object
-      return (
-        <div class="carousel-slide" data-key={index}>
-          <Image 
-            src={image.src}  // ✅ Use `image.src` instead of `{...src}`
-            width={image.width} 
-            height={image.height}
-            alt={altList[index]} 
-            class="h-full w-full object-cover object-center" 
-            draggable="false" 
-            loading="eager" 
-          />
-        </div>
-      );
-    })}
+    {srcList.map((image, index) => (
+      <div class="carousel-slide" data-key={index}>
+        <Image 
+          src={image.src}  // ✅ Use `image.src` instead of `{...src}`
+          width={image.width} 
+          height={image.height}
+          alt={altList[index]} 
+          class="h-full w-full object-cover object-center" 
+          draggable="false" 
+          loading="eager" 
+        />
+      </div>
+    ))}
+    
 </div>
 
 </section>
