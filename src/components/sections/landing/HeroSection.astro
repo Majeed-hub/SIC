@@ -4,22 +4,13 @@ import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
 import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
 
-// Define props from Astro
-const {
-  title,
-  subTitle,
-  primaryBtn,
-  primaryBtnURL,
-  secondaryBtn,
-  secondaryBtnURL,
-  withReview,
-  avatars,
-  starCount,
-  rating,
-  reviews,
-  srcList, // Updated: Array of images for carousel
-  altList
-} = Astro.props;
+// Define TypeScript interface for image objects
+interface ImageObject {
+  src: ImageMetadata;
+  alt: string;
+  width: number;
+  height: number;
+}
 
 // Define TypeScript interface for props
 interface Props {
@@ -34,9 +25,26 @@ interface Props {
   starCount?: number;
   rating?: string;
   reviews?: string;
-  srcList: string[]; // Updated: Accepts an array of images
-  altList: Array<string>;
+  srcList: ImageObject[]; // Updated: Now expects array of ImageObject
+  altList: string[];
 }
+
+// Define props from Astro
+const {
+  title,
+  subTitle,
+  primaryBtn,
+  primaryBtnURL,
+  secondaryBtn,
+  secondaryBtnURL,
+  withReview,
+  avatars,
+  starCount,
+  rating,
+  reviews,
+  srcList,
+  altList
+} = Astro.props;
 ---
 
 <section
@@ -65,19 +73,17 @@ interface Props {
     {srcList.map((image, index) => (
       <div class="carousel-slide" data-key={index}>
         <Image 
-          src={image.src}  // ✅ Use `image.src` instead of `{...src}`
-          width={image.width} 
+          src={image.src}
+          width={image.width}
           height={image.height}
-          alt={altList[index]} 
-          class="h-full w-full object-cover object-center" 
-          draggable="false" 
-          loading="eager" 
+          alt={image.alt}
+          class="h-full w-full object-cover object-center"
+          draggable="false"
+          loading="eager"
         />
       </div>
     ))}
-    
-</div>
-
+  </div>
 </section>
 
 <style>
