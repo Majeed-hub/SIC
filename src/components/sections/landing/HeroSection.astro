@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
 import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
-import type { ImageMetadata } from "astro:assets";
+
 // Define props from Astro
 const {
   title,
@@ -34,7 +34,7 @@ interface Props {
   starCount?: number;
   rating?: string;
   reviews?: string;
-  srcList: ImageMetadata[]; // Updated: Accepts an array of images
+  srcList: string[]; // Updated: Accepts an array of images
   altList: Array<string>;
 }
 ---
@@ -62,16 +62,17 @@ interface Props {
 
   <!-- Hero Image Carousel -->
   <div class="flex w-full relative overflow-hidden carousel-container">
-    {srcList.map((src, index) => {
+    {srcList.map((image, index) => {  // ✅ Use full image object
       return (
-        <div class="carousel-slide" data-key={index}>  <!-- Changed key to data-key -->
+        <div class="carousel-slide" data-key={index}>
           <Image 
-            src={...src} 
+            src={image.src}  // ✅ Use `image.src` instead of `{...src}`
+            width={image.width} 
+            height={image.height}
             alt={altList[index]} 
             class="h-full w-full object-cover object-center" 
-            draggable={"false"} 
-            loading={"eager"} 
-            format={"avif"} 
+            draggable="false" 
+            loading="eager" 
           />
         </div>
       );

@@ -40,23 +40,22 @@ const avatarSrcs: Array<string> = [
 <MainLayout>
 
   <HeroSection
-    title=`Qatar's Leading PET Preform <span
-        class="text-maroon-700 dark:text-maroon-700">Manufacturer</span>`
-    subTitle="Innovative Excellence in Plastic Solutions for Water, Juice & Dairy Packaging."
-    primaryBtn="Start Exploring"
-    primaryBtnURL="/products"
-    secondaryBtn="Contact us"
-    secondaryBtnURL="/contact"
-    srcList={[heroImage1, heroImage2, heroImage3,heroImage4, heroImage5, heroImage6]}
-    altList={[
-      "Stack of Water Preform product",
-      "Manufacturing process",
-      "PET Bottles",
-      "Construction process of a factory",
-      "Building under progress",
-      "Under-construction site with equipment"
-    ]}
-  />
+  title={`Qatar's Leading PET Preform <span class="text-maroon-700 dark:text-maroon-700">Manufacturer</span>`}
+  subTitle="Innovative Excellence in Plastic Solutions for Water, Juice & Dairy Packaging."
+  primaryBtn="Start Exploring"
+  primaryBtnURL="/products"
+  secondaryBtn="Contact us"
+  secondaryBtnURL="/contact"
+  srcList={[heroImage1, heroImage2, heroImage3, heroImage4, heroImage5, heroImage6]} // ✅ Pass the full image object
+  altList={[
+    "Stack of Water Preform product",
+    "Manufacturing process",
+    "PET Bottles",
+    "Construction process of a factory",
+    "Building under progress",
+    "Under-construction site with equipment"
+  ]}
+/>
 
   <FeaturesGeneral
     title="Excellence in PET Preform Manufacturing"
