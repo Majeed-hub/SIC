@@ -1,131 +1,10 @@
 ---
-import MainLayout from "@/layouts/MainLayout.astro";
-import HeroSection from "@components/sections/landing/HeroSection.astro";
-import ClientsSection from "@components/sections/landing/ClientsSection.astro";
-import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
-import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
-import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
-import FAQ from "@components/sections/misc/FAQ.astro";
-import heroImage1 from "@images/product-image-3.avif";
-import heroImage2 from "@images/bottles.jpg";
-import heroImage3 from "@images/mission.jpg";
-import heroImage4 from "@images/construction-image.avif";
-import heroImage5 from "@images/progress-building.avif";
-import heroImage6 from "@images/under-construction.avif";
-import faqs from "@data/faqs.json";
-import features from "@data/features.json";
-import construction from "@images/quality.jpg";
-import tools from "@images/stateof.jpg";
-import dashboard from "@images/bottles.jpg";
-import { partnersData } from "@/data_files/constants";
-
-const images = [
-  { src: heroImage1, alt: "First hero image", width: 1200, height: 800 },
-  { src: heroImage2, alt: "Second hero image", width: 1200, height: 800 },
-  { src: heroImage3, alt: "Third hero image", width: 1200, height: 800 },
-  { src: heroImage4, alt: "Fourth hero image", width: 1200, height: 800 },
-  { src: heroImage5, alt: "Fifth hero image", width: 1200, height: 800 },
-  { src: heroImage6, alt: "Sixth hero image", width: 1200, height: 800 }
-];
----
-
-<MainLayout>
-  <HeroSection
-    title={`Qatar's Leading PET Preform <span class="text-maroon-700 dark:text-maroon-700">Manufacturer</span>`}
-    subTitle="Innovative Excellence in Plastic Solutions for Water, Juice & Dairy Packaging."
-    primaryBtn="Start Exploring"
-    primaryBtnURL="/products"
-    secondaryBtn="Contact us"
-    secondaryBtnURL="/contact"
-    srcList={images}
-  />
-
-  <FeaturesGeneral
-    title="Excellence in PET Preform Manufacturing"
-    subTitle="At Qatar International Plastic Factory, we specialize in high-quality PET preforms for water, juice, and dairy packaging."
-    features={features} 
-  />
-
-  <FeaturesNavs
-    title={`Customize <span class="text-maroon-700 dark:text-maroon-700">Qatar International Plastic Factory</span>'s offerings to suit your packaging needs.`}
-    tabs={[
-      {
-        heading: "State-of-the-Art PET Preforms",
-        content: "We specialize in high-quality PET preforms for water, juice, and dairy products, manufactured using advanced Milacron machines.",
-        svg: "tools",
-        src: tools,
-        alt: "PET preforms on a production line",
-        first: true,
-      },
-      {
-        heading: "High-Quality PET Preforms",
-        content: "Our PET Preforms are manufactured with precision to ensure durability, clarity, and superior performance for various beverage and packaging needs.",
-        svg: "dashboard",
-        src: dashboard,
-        alt: "High-Quality PET Preforms for diverse applications",
-        second: true,
-      },
-      {
-        heading: "Quality Assurance & Innovation",
-        content: "Equipped with advanced instruments, we ensure top-quality standards while continuously innovating new mold products.",
-        svg: "house",
-        src: construction,
-        alt: "Quality assurance instruments in the factory",
-      },
-    ]}
-  />
-
-  <TestimonialsSection
-    title="Fast-Track Your Production"
-    subTitle="At Qatar International Plastic Factory, we ensure a swift start with instant production setup. Experience the speed of manufacturing redefined."
-    testimonials={[
-      {
-        content: "Qatar International Plastic Factory dramatically boosted our production efficiency. Setup was instant, and their results exceeded expectations.",
-        author: "Mohamed Zaghloul",
-        role: "General Manager | SIC-QATAR"
-      }
-    ]}
-    statistics={[
-      {
-        count: "100M+",
-        description: "preforms produced monthly — from small to large-scale production",
-      },
-      {
-        count: "20k+",
-        description: "tons of finished products annually",
-      },
-      {
-        count: "6",
-        description: "production lines with the latest international technology",
-      },
-      {
-        count: "2x",
-        description: "quicker production using innovative plastic solutions",
-      },
-    ]}
-  />
-
-  <section id="clients">
-    <ClientsSection
-      title="Trusted by Industry Leaders"
-      subTitle="Experience the reliability chosen by industry giants."
-      partners={partnersData}
-    />
-  </section>
-
-  <section id="faqs">
-    <FAQ title="Frequently<br />asked questions" faqs={faqs} />
-  </section>
-</MainLayout>
-
-// src/components/sections/landing/HeroSection.astro
----
 import { Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
 import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
 
+// Define TypeScript interface for image objects
 interface ImageObject {
   src: ImageMetadata;
   alt: string;
@@ -133,6 +12,7 @@ interface ImageObject {
   height: number;
 }
 
+// Define TypeScript interface for props
 interface Props {
   title: string;
   subTitle?: string;
@@ -145,9 +25,11 @@ interface Props {
   starCount?: number;
   rating?: string;
   reviews?: string;
-  srcList: ImageObject[];
+  srcList: ImageObject[]; // Updated: Now expects array of ImageObject
+  altList: string[];
 }
 
+// Define props from Astro
 const {
   title,
   subTitle,
@@ -161,35 +43,32 @@ const {
   rating,
   reviews,
   srcList,
+  altList
 } = Astro.props;
 ---
 
-<section class="mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full">
+<section
+  class="mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full"
+>
+  <!-- Title and description -->
   <div>
     <h1 class="block text-balance text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-4xl lg:text-6xl lg:leading-tight">
       <Fragment set:html={title} />
     </h1>
-    {subTitle && 
-      <p class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5">
-        {subTitle}
-      </p>
+    {subTitle &&
+    <p class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5">
+      {subTitle}
+    </p>
     }
     
+    <!-- Action Button Section -->
     <div class="mt-7 grid w-full gap-3 sm:inline-flex">
       {primaryBtn && <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />}
       {secondaryBtn && <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />}
     </div>
-
-    {withReview && 
-      <ReviewComponent
-        avatars={avatars}
-        starCount={starCount}
-        rating={rating}
-        reviews={reviews}
-      />
-    }
   </div>
 
+  <!-- Hero Image Carousel -->
   <div class="flex w-full relative overflow-hidden carousel-container">
     {srcList.map((image, index) => (
       <div class="carousel-slide" data-key={index}>
